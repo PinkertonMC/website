@@ -1,0 +1,39 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "react-app"
+    ],
+    "plugins": [
+        "simple-import-sort",
+        "import"
+    ],
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2019
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "simple-import-sort/imports": "error",
+        "react/react-in-jsx-scope": "off",
+        "yoda": "error",
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "no-template-curly-in-string": "warn",
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "prefer-arrow-callback": "error",
+        "prefer-template": "warn",
+        "no-useless-concat": "error"
+    }
+}

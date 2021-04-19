@@ -47,15 +47,17 @@ const useStyles: () => ClassNameMap<string> = // Define the styles we will use e
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.leavingScreen,
             }),
-            marginLeft: -drawerWidth,
         },
         contentShift: {
             transition: theme.transitions.create("margin", {
                 easing: theme.transitions.easing.easeOut,
                 duration: theme.transitions.duration.enteringScreen,
             }),
-            marginLeft: 0,
+            marginLeft: drawerWidth,
         },
+        cardimg: {
+            objectFit: "contain",
+        }
     }));
 
 export default useStyles; // Export the styles for use elsewhere

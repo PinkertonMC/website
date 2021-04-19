@@ -1,17 +1,21 @@
-import { Button, Card, CardActions, CardContent, Typography } from "@material-ui/core";
-import React from "react";
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core";
 
 import useStyles from "../Styles/styles"
 
 export default function HomePage(): JSX.Element {
+
     return (
-        <Card variant="outlined">
-            <CardContent>
-                <Typography></Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+        <Card variant="outlined" color="primary">
+            <div style={{ padding: "2rem" }}>
+                <CardMedia
+                    component="img"
+                    alt="Pinkerton Logo"
+                    height="400"
+                    image="/assets/images/transparentLogo.svg"
+                    className="cardimg"
+                />
+            </div>
         </Card>
+
     );
 }

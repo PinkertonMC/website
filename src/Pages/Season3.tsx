@@ -1,17 +1,18 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
 
-export default function HomePage(): JSX.Element {
+export default function SeasonThreePage(): JSX.Element {
+    document.title = "Season 3 | PinkertonMC";
     return (
         <>
             <Card variant="outlined" color="primary" style={{ marginBottom: "2rem" }}>
-                <div style={{ padding: "2rem" }}>
+                <div style={{ position: "relative" }}>
                     <CardMedia
                         component="img"
                         alt="Pinkerton Logo"
                         height="400"
-                        image="/assets/images/transparentLogo.svg"
-                        className="cardimg"
+                        image="/assets/images/s3teaser.png"
                     />
+                    <img src="/assets/images/pinkertons3website.png" alt="Pinkerton Season 3" style={{ right: "50%", bottom: "50%", transform: "translate(50%,50%)", position: "absolute" }} />
                 </div>
             </Card>
             <Grid container justify="center" spacing={2}>

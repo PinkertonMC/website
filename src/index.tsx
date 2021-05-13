@@ -13,12 +13,14 @@ import VideogameAssetIcon from "@material-ui/icons/VideogameAsset"; // Import Ga
 import clsx from "clsx"; // Import conditional React class helper
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom"; // Import React DOM
-import { BrowserRouter as Router, Route, Switch as RouterSwitch } from "react-router-dom"; // Import router to have multiple pagers, route to define pages, switch for the router switch, and link to link pages with react-router
+import { BrowserRouter as Router, Link, Route, Switch as RouterSwitch } from "react-router-dom"; // Import router to have multiple pagers, route to define pages, switch for the router switch, and link to link pages with react-router
 
 import useStyles from "./Styles/styles"; // Import our styles
 import SuspenseLoader from "./Util/SuspenseLoader";
 // Page Imports
 const HomePage = React.lazy(() => import("./Pages/Home"));
+const SeasonThree = React.lazy(() => import("./Pages/Season3"));
+const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
 // End Page Imports
 
 // set default theme
@@ -65,18 +67,19 @@ function MainApp(): JSX.Element {
     const handleDrawerClose = () => { // Function for drawer close
         drawerSetOpen(false);
     };
-    function rickRoll(): "shrek" {
+    document.title = "PinkertonMC";
+    function rickRoll(): void {
         window.location.replace("https://www.youtube.com/watch?v=oHg5SJYRHA0");
-        return "shrek";
     }
+
     return (
         <>
             <AppBar position="static" className={clsx(globalStyles.appBar, {
                 [globalStyles.appBarShift]: drawerOpen,
             })}>
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <MenuIcon onClick={handleDrawerOpen} className={clsx(globalStyles.menuButton, drawerOpen && globalStyles.hide)} />
+                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleDrawerOpen} className={clsx(globalStyles.menuButton, drawerOpen && globalStyles.hide)} >
+                        <MenuIcon />
                     </IconButton>
                     <img src="/assets/images/transparentLogo.svg" alt="PinkertonMC logo" height="36" />
                 </Toolbar>
@@ -103,11 +106,11 @@ function MainApp(): JSX.Element {
                 </Tooltip>
                 <Divider />
                 <List>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/" onClick={handleDrawerClose}>
                         <ListItemIcon><HomeIcon /></ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>
                         <ListItemIcon><Looks3Icon /></ListItemIcon>
                         <ListItemText primary="Season 3" />
                     </ListItem>
@@ -127,11 +130,17 @@ function MainApp(): JSX.Element {
                 <Suspense fallback={<SuspenseLoader />}>
                     <RouterSwitch>
                         {/* Start game URLS */}
+                        <Route path="/season3">
+                            <SeasonThree />
+                        </Route>
                         <Route path="/rick">
                             {() => { rickRoll(); }}
                         </Route>
-                        <Route path="/">
+                        <Route path="/" exact>
                             <HomePage />
+                        </Route>
+                        <Route>
+                            <NotFoundPage />
                         </Route>
                     </RouterSwitch>
                 </Suspense>

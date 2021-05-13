@@ -32,6 +32,16 @@ const useStyles: () => ClassNameMap<string> = // Define the styles we will use e
         drawerPaper: {
             width: drawerWidth,
         },
+        dflex: {
+            display: "flex",
+        },
+        details: {
+            display: "flex",
+            flexDirection: "column",
+        },
+        homeContent: {
+            flex: "1 0 auto",
+        },
         drawerHeader: {
             display: "flex",
             alignItems: "center",

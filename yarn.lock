@@ -1192,15 +1192,37 @@
     "@firebase/util" "1.1.0"
     tslib "^2.1.0"
 
+"@firebase/app-check-interop-types@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@firebase/app-check-interop-types/-/app-check-interop-types-0.1.0.tgz#83afd9d41f99166c2bdb2d824e5032e9edd8fe53"
+  integrity sha512-uZfn9s4uuRsaX5Lwx+gFP3B6YsyOKUE+Rqa6z9ojT4VSRAsZFko9FRn6OxQUA1z5t5d08fY4pf+/+Dkd5wbdbA==
+
+"@firebase/app-check-types@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@firebase/app-check-types/-/app-check-types-0.1.0.tgz#75602650c5f118891834280b72addcac513c4b7d"
+  integrity sha512-jf92QzVkj9ulyp/K01h/GpVYNSjuk6DP9nHkq4AUyM+35e96cl9gL3+qOTD0//5CVfrWjRo7+lbVlW2OpG/JDQ==
+
+"@firebase/app-check@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@firebase/app-check/-/app-check-0.1.1.tgz#26c15df13048a86c025590f8b8b579f3f9b8b99c"
+  integrity sha512-nBNiyhbCBpaVfVNjwGor+f0LZkn5kf1QRdMPbRyZUJG6BjTByMhNmbezEaCWNO0MNBhsNqYqiXUivHJU4A3+2Q==
+  dependencies:
+    "@firebase/app-check-interop-types" "0.1.0"
+    "@firebase/app-check-types" "0.1.0"
+    "@firebase/component" "0.5.0"
+    "@firebase/logger" "0.2.6"
+    "@firebase/util" "1.1.0"
+    tslib "^2.1.0"
+
 "@firebase/app-types@0.6.2":
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.6.2.tgz#8578cb1061a83ced4570188be9e225d54e0f27fb"
   integrity sha512-2VXvq/K+n8XMdM4L2xy5bYp2ZXMawJXluUIDzUBvMthVR+lhxK4pfFiqr1mmDbv9ydXvEAuFsD+6DpcZuJcSSw==
 
-"@firebase/app@0.6.21":
-  version "0.6.21"
-  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.6.21.tgz#ce8f010267b9c680b0295f5d6602910726e85627"
-  integrity sha512-SpWXdy/U06gTOEofSjhcsFGUtYmZim7ty6U4eMUQH0ObtymeVdTiK4tJcohMT5XoihQw4CLS2YvDySwx3+BlWg==
+"@firebase/app@0.6.22":
+  version "0.6.22"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.6.22.tgz#099f51d2c4302d2c99da82994cd176b5a568cfcc"
+  integrity sha512-9E0KP7Z+LpBOx/oQauLYvf3XleYpbfoi058wStADUtP+eOX5GIImAFNDTOO4ZNuJfLgyrHpKi7Cct6mDdxrz+g==
   dependencies:
     "@firebase/app-types" "0.6.2"
     "@firebase/component" "0.5.0"
@@ -1242,10 +1264,10 @@
   dependencies:
     "@firebase/app-types" "0.6.2"
 
-"@firebase/database@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.10.0.tgz#671daa57867855ea4639a124714d39222f15f016"
-  integrity sha512-GsHvuES83Edtboij2h3txKg+yV/TD4b5Owc01SgXEQtvj1lulkHt4Ufmd9OZz1WreWQJMIqKpbVowIDHjlkZJQ==
+"@firebase/database@0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.10.1.tgz#1e8c64519552f225a4a88e7dae09ecf29447f2be"
+  integrity sha512-umT0kynJKc5VpVBOg3+YTDzdJORssh+QqPjoHfbSvtmgZizNiV8mgmKRcDhlVM6CisPb6v5xBn9l8JbK/WRQ1Q==
   dependencies:
     "@firebase/auth-interop-types" "0.1.6"
     "@firebase/component" "0.5.0"
@@ -2129,15 +2151,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^14.14.41":
-  version "14.14.41"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
-  integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
-
-"@types/node@>=12.12.47":
-  version "14.14.37"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
-  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
+"@types/node@*", "@types/node@>=12.12.47", "@types/node@^15.3.0":
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.3.0.tgz#d6fed7d6bc6854306da3dea1af9f874b00783e26"
+  integrity sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==
 
 "@types/node@^13.7.0":
   version "13.13.48"
@@ -3693,7 +3710,7 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
-clsx@^1.0.4, clsx@^1.1.1:
+clsx@^1.0.4, clsx@^1.1.0, clsx@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
   integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
@@ -4483,6 +4500,11 @@ detect-port-alt@1.1.6:
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
+
+dialog-polyfill@^0.4.7:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/dialog-polyfill/-/dialog-polyfill-0.4.10.tgz#c4ea68a0deed4abb59a6a2a025c548b278cd532e"
+  integrity sha512-j5yGMkP8T00UFgyO+78OxiN5vC5dzRQF3BEio+LhNvDbyfxWBsi3sfPArDm54VloaJwy2hm3erEiDWqHRC8rzw==
 
 diff-sequences@^26.6.2:
   version "26.6.2"
@@ -5479,16 +5501,17 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-firebase@^8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-8.5.0.tgz#185d16bb3a8f302e87d9e517d73828af55eacb3f"
-  integrity sha512-dsyONwJ6y4f7OL7MjqzFtRwbkwkni2Xx4pubzPqSyYEjLfqJOrUNIhUf6U7G7fsTLqBI71hdRmUEMt/Bukl8QA==
+firebase@^8.6.1:
+  version "8.6.1"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-8.6.1.tgz#6f0362ad35ce95af5758a49ecea9c33c9c9a8869"
+  integrity sha512-10eQ6RPUl71s68f+d2SsfPP0rHCTHqsZpt0xMg0RvWf3fqx5PlnJrItSrfWxZEuRgawJSkiPybpf+Q/LfluFLA==
   dependencies:
     "@firebase/analytics" "0.6.10"
-    "@firebase/app" "0.6.21"
+    "@firebase/app" "0.6.22"
+    "@firebase/app-check" "0.1.1"
     "@firebase/app-types" "0.6.2"
     "@firebase/auth" "0.16.5"
-    "@firebase/database" "0.10.0"
+    "@firebase/database" "0.10.1"
     "@firebase/firestore" "2.3.0"
     "@firebase/functions" "0.6.8"
     "@firebase/installations" "0.4.26"
@@ -5498,6 +5521,14 @@ firebase@^8.5.0:
     "@firebase/remote-config" "0.1.37"
     "@firebase/storage" "0.5.2"
     "@firebase/util" "1.1.0"
+
+firebaseui@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/firebaseui/-/firebaseui-4.8.0.tgz#74c10a30db17f2cbfe020c91b97d5e3c6e8efbbc"
+  integrity sha512-DG8CD+969JHMailhOm8nKo+eJlumIHex0TH18eJeTo0Q2KEt5m/b61S1ky4bavK/nGmLJBRECJytq09/pwhZ0A==
+  dependencies:
+    dialog-polyfill "^0.4.7"
+    material-design-lite "^1.2.0"
 
 flat-cache@^3.0.4:
   version "3.0.4"
@@ -5997,7 +6028,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -7734,6 +7765,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+material-design-lite@^1.2.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/material-design-lite/-/material-design-lite-1.3.0.tgz#d004ce3fee99a1eeb74a78b8a325134a5f1171d3"
+  integrity sha1-0ATOP+6Zoe63Sni4oyUTSl8RcdM=
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -8202,6 +8238,14 @@ normalize.css@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
+
+notistack@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/notistack/-/notistack-1.0.7.tgz#1a5a3a8ba91d6ce9bd34cfd27eaff17b16c5d45c"
+  integrity sha512-D6pHvYgSGmS86r8KspQb4A75DXnIRrCdmUX79Gg8eJ1/I4IMDy0DULUqjytwEkQT02naeSnTLc9WkepLjHKQug==
+  dependencies:
+    clsx "^1.1.0"
+    hoist-non-react-statics "^3.3.0"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -9753,6 +9797,13 @@ react-error-overlay@^6.0.9:
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
+
+react-firebaseui@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/react-firebaseui/-/react-firebaseui-5.0.2.tgz#7496bc595454abdd3e1c10612bb3446cb125181a"
+  integrity sha512-ZfIWfRKlKAkMwEI+41rMPkwdNEQEfBLXV6TVaN5er3cdwMD0vQecWt6YOE4/v1ELziaj10NNRB8yB42V56QBMQ==
+  dependencies:
+    firebaseui "^4.8.0"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

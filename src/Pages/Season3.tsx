@@ -1,6 +1,6 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, Typography } from "@material-ui/core";
+import { Button, Card } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import GroupIcon from "@material-ui/icons/Group";
 import LandscapeIcon from "@material-ui/icons/Landscape";
@@ -13,7 +13,7 @@ export default function SeasonThreePage(): JSX.Element {
     return (
         <div className="text-center s3-body">
             <Card color="primary" style={{ marginBottom: "2rem" }} className="head">
-                <img src="assets/img/logo.png" className="logos" alt="Pinkerton Season 3 logo" />
+                <img src="/assets/images/logo.png" className="logos" alt="Pinkerton Season 3 logo" />
                 <h1 className="s3-heading">
                     <div className="marki markianimation">A Minecraft Server Like No Other.</div>
                 </h1>
@@ -30,7 +30,7 @@ export default function SeasonThreePage(): JSX.Element {
                     </div>
                     <div className="outerboxleft cssanimation fadeInBottom">
 
-                        <a href="/assets/img/terrain.png"><img className="innerboxleft scaleimg" src="/assets/img/terrain.png" alt="Pinkerton S3 Terrain" /></a>
+                        <a href="/assets/images/terrain.png"><img className="innerboxleft scaleimg" src="/assets/images/terrain.png" alt="Pinkerton S3 Terrain" /></a>
                     </div>
                     <div className="textarearight cssanimation fadeInBottom">
                         <h1>It's got <mark>custom</mark> world generation.</h1>
@@ -57,7 +57,7 @@ export default function SeasonThreePage(): JSX.Element {
                 </div>
                 <div className="box">
                     <div className="outerboxleft cssanimation fadeInBottom">
-                        <a href="/assets/img/customitems.png"><img className="innerboxleft scaleimg" src="/assets/img/customitems.png" alt="Pinkerton S3 Custom Items" /></a>
+                        <a href="/assets/images/customitems.png"><img className="innerboxleft scaleimg" src="/assets/images/customitems.png" alt="Pinkerton S3 Custom Items" /></a>
                     </div>
                     <div className="textarearight cssanimation fadeInBottom">
                         <h1>With custom <mark>tools</mark> and <mark>items</mark>.</h1>

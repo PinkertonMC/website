@@ -1,6 +1,6 @@
 import "../Styles/alex.scss";
 
-import { Button, Card } from "@material-ui/core";
+import { Button, Card, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import GroupIcon from "@material-ui/icons/Group";
 import LandscapeIcon from "@material-ui/icons/Landscape";
@@ -11,10 +11,10 @@ import copy from "../Snippets/Copy";
 export default function SeasonThreePage(): JSX.Element {
     document.title = "Season 3 | PinkertonMC";
     return (
-        <>
+        <div className="text-center s3-body">
             <Card color="primary" style={{ marginBottom: "2rem" }} className="head">
                 <img src="assets/img/logo.png" className="logos" alt="Pinkerton Season 3 logo" />
-                <h1>
+                <h1 className="s3-heading">
                     <div className="marki markianimation">A Minecraft Server Like No Other.</div>
                 </h1>
                 <h3>With custom items, better terrain, more biomes, player shops, and more, Pinkerton S3 is the Minecraft Server of choice for anyone and everyone.
@@ -82,6 +82,6 @@ export default function SeasonThreePage(): JSX.Element {
                     </Button>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

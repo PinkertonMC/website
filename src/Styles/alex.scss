@@ -1,4 +1,4 @@
-body {
+.s3-body {
     background-color: white;
     font-family: 'Roboto', 'sans-serif';
     text-align: center;
@@ -6,9 +6,7 @@ body {
     margin: 0;
 }
 
-h1,
-h2,
-h3 {
+.s3-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -255,46 +253,9 @@ mark {
     color: white;
 }
 
-.navbar {
-    width: 100%;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #121212;
-}
-
-.navbar li {
-    float: left;
-}
 
 .headimg {
     width: 32px;
-}
-
-.navbar li a {
-    color: white;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-}
-
-.navbar li div a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 7px 8px;
-    text-decoration: none;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
 }
 
 .navbar li a:hover {

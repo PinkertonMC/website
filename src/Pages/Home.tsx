@@ -1,6 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
 
 export default function HomePage(): JSX.Element {
+    document.title = "PinkertonMC";
     return (
         <>
             <Card variant="outlined" color="primary" style={{ marginBottom: "2rem" }}>

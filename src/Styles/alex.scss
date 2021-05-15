@@ -1,0 +1,310 @@
+body {
+    background-color: white;
+    font-family: 'Roboto', 'sans-serif';
+    text-align: center;
+    color: #121212;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.main {
+    max-width: 1600px;
+    margin: auto;
+    float: none;
+    width: 95%;
+    min-height: 100%;
+}
+
+.logos {
+    margin: auto;
+    display: block;
+    height: 400px;
+    margin-top: -125px;
+    margin-bottom: -100px;
+}
+
+.outerboxleft {
+    background-image: linear-gradient(45deg, rgba(64, 209, 255, 1) 0%, #00ffae 100%);
+    border-radius: 5px;
+    width: 45%;
+    max-width: 640px;
+    display: inline-block;
+    margin: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.innerboxleft {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 7%;
+    margin-top: -7%;
+    margin-left: -7%;
+    display: inline-block;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.textarearight {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px;
+    text-align: left;
+}
+
+.outerboxright {
+    background-image: linear-gradient(135deg, rgb(169, 64, 255) 0%, #0084ff 100%);
+    border-radius: 5px;
+    width: 45%;
+    max-width: 640px;
+    display: inline-block;
+    margin: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 51%;
+}
+
+.innerboxright {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -7%;
+    margin-bottom: 7%;
+    margin-left: 4%;
+    display: inline-block;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.textarealeft {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px;
+    text-align: right;
+    margin-top: -25.5%
+}
+
+.cssanimation,
+.cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+.fadeInBottom {
+    animation-name: fadeInBottom
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1
+    }
+}
+
+mark {
+    background-color: #121212;
+    padding: 3px;
+    color: white;
+}
+
+.marki {
+    background-color: rgba(0, 0, 0, 0);
+    color: #121212;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    animation: 2s ease-in-out 0s 1 markianimation;
+}
+
+@keyframes markianimation {
+    0% {
+        background-position: -100% 0%;
+        background-size: 4px 100%;
+        color: white;
+    }
+    100% {
+        color: black;
+        background-size: 100% 100%;
+        background-position: 0% 0%;
+        background-image: linear-gradient(white, white);
+    }
+}
+
+.scaleimg {
+    transition: all 0.5s ease;
+}
+
+.scaleimg:hover {
+    -webkit-transform: rotate(3deg) scale(1.2);
+    transform: rotate(3deg) scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.scaleimgl {
+    transition: all 0.5s ease;
+}
+
+.scaleimgl:hover {
+    -webkit-transform: rotate(-3deg) scale(1.2);
+    transform: rotate(-3deg) scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.box {
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-position: 50% 65%;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    min-height: 350px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.homepagebutton {
+    color: #121212;
+    background: #FFF;
+    padding: 10px 10px;
+    min-width: 320px;
+    height: 50px;
+    border: 3px solid #121212;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #242424;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.homepagebutton:hover {
+    border: 3px solid #121212;
+    color: #fff;
+    background-color: #121212;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.copyright {
+    background-color: #121212;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+.socials {
+    color: white;
+    font-size: 36px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.scaletext * {
+    color: white;
+    transition: all ease .5s;
+}
+
+.scaletext *:hover {
+    background-image: linear-gradient(90deg, rgb(169, 64, 255), #0084ff);
+    transition: all ease .5s;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.copyright * {
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.navbar li {
+    float: left;
+}
+
+.headimg {
+    width: 32px;
+}
+
+.navbar li a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.navbar li div a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.navbar li a:hover {
+    background-color: #242424;
+}
+
+a:link {
+    color: #121212;
+}
+
+a:visited {
+    color: #323232
+}

@@ -51,7 +51,7 @@ export default function SeasonThreePage(): JSX.Element {
                     </div>
                     <div className="outerboxright cssanimation fadeInBottom">
                         <div className="aspect-ratio">
-                            <iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord"></iframe>
+                            <iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe>
                         </div>
                     </div>
                 </div>

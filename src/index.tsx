@@ -7,6 +7,7 @@ import { AppBar, Avatar, Button, createMuiTheme, Dialog, DialogActions, DialogCo
 import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle"; // Import account icon, for when user is not logged in for the drawer
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"; // Import Chevron Icon
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import HomeIcon from "@material-ui/icons/Home"; // Import Home Icon
 import Looks3Icon from "@material-ui/icons/Looks3"; // Import 3 icon
 import LooksTwoIcon from "@material-ui/icons/LooksTwo"; // Import 3 icon
@@ -74,17 +75,37 @@ function DrawerTop(): JSX.Element {
 }
 function AccountDialog(props: { handleClose: () => void }) {
     const globalStyles: ClassNameMap<string> = useStyles(); // Import global styles
+    const [mcAvatar, setMcAvatar] = React.useState("c06f8906-4c8a-4911-9c29-ea1dbd1aab82");
+    const [mcUsername, setMcUsername] = React.useState("Loading...");
+    firebase.database().ref(`/users/${firebase.auth()?.currentUser?.uid}/linkedmc/`).once("value").then((snapshot: firebase.database.DataSnapshot) => {
+        const snapshotval = snapshot.val();
+        if (snapshotval?.linked) {
+            setMcAvatar(snapshotval.uuid);
+            setMcUsername(snapshotval.username);
+        } else {
+            setMcUsername("No Account Linked!");
+        }
+    });
     return (
         <>
             <DialogTitle className={globalStyles.dialog}>Settings</DialogTitle> {/* Dialog title */}
             <DialogContent className={globalStyles.dialog}> {/* Start dialog content wrapper*/}
                 <Grid container spacing={2}>
                     <Grid item>
-                        <img src={`https://crafatar.com/renders/body/${firebase.database().ref(`/users/${firebase.auth()?.currentUser?.uid}/linkedmc/uuid`).once("value")}`} alt="Your Minecraft Avatar" style={{ filter: "drop-shadow(0px 0px 6px)" }} />
+                        <img src={`https://crafatar.com/renders/body/${mcAvatar}`} alt="Your Minecraft Avatar" style={{ filter: "drop-shadow(0px 0px 6px)" }} />
                     </Grid>
-                    <Grid item>
+                    <Grid item style={{ flexGrow: 1 }}>
                         <List> {/* Start list */}
-                            <ListItemText primary="isteiger11" secondary="Linked Minecraft Account" />
+                            <ListItemText primary={mcUsername} secondary="Linked Minecraft Account" />
+                            <ListSubheader>Options</ListSubheader> {/* Options subheader */}
+                            <ListItem button onClick={() => { firebase.auth().signOut(); window.location.reload(); }}>
+                                {/* Note for later: I was doing the link account button thing */}
+                                <ListItemIcon>
+                                    <ExitToAppIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Sign Out" />
+                            </ListItem>
+
                             {firebase.auth().currentUser?.providerData[0]?.providerId === "password" ? // If the user's provider is email, which is known as password to Firebase
                                 <> {/* JSX parent holder element */}
                                     <ListSubheader>Email Account Settings</ListSubheader> {/* List subheader for account settings */}
@@ -134,18 +155,14 @@ function AccountDialog(props: { handleClose: () => void }) {
                                 :
                                 true
                             }
-                            <ListSubheader>Options</ListSubheader> {/* Options subheader */}
 
                         </List> {/* End of the settings list (god damn finally!) */}
                     </Grid>
                 </Grid>
             </DialogContent> {/* End dialog content wrapper */}
             <DialogActions className={globalStyles.dialog}> {/* Start dialog actions */}
-                <Button onClick={props.handleClose}> {/* Close dialog if user does not want to sign out */}
-                    No
-                </Button>
-                <Button onClick={() => { firebase.auth().signOut(); window.location.reload(); }}> {/* If the user says they want to sign out, sign out and reload */}
-                    Yes
+                <Button onClick={props.handleClose}> {/* Close dialog */}
+                    Close
                 </Button>
             </DialogActions> {/* End dialog actions */}
         </>

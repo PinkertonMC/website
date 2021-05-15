@@ -3,7 +3,7 @@ import "./Styles/styles.scss";
 import "firebase/database"; // Import Firebase Database component
 import "firebase/auth"; // Import Firebase Authentication component to do what it says
 
-import { AppBar, Avatar, Button, createMuiTheme, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip, Typography } from "@material-ui/core"; // Import our Material-UI Components
+import { AppBar, Avatar, Button, createMuiTheme, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip } from "@material-ui/core"; // Import our Material-UI Components
 import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle"; // Import account icon, for when user is not logged in for the drawer
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"; // Import Chevron Icon
@@ -159,7 +159,6 @@ function AccountDialog(props: { handleClose: () => void }) {
  */
 function AuthDialog(props: { authOpen: boolean, handleClose: () => void }): JSX.Element {
     const globalStyles: ClassNameMap<string> = useStyles(); // Import global styles
-    const [signInText, signInTextSet] = React.useState<string>("Sign In"); // Set state for sign in text, which is sign in until we can verify the user is signed in
     const [signedIn, signedInSet] = React.useState<boolean>(false); // Set state for if signed in
     const { enqueueSnackbar } = useSnackbar();
     const uiConfig: firebaseui.auth.Config = { // Configuration for FirebaseUI
@@ -182,7 +181,6 @@ function AuthDialog(props: { authOpen: boolean, handleClose: () => void }): JSX.
     }; // End config for FirebaseUI
     firebase.auth().onAuthStateChanged((user: firebase.User | null) => { // When the Firebase auth component is ready
         if (user) { // If the user is signed in 
-            signInTextSet("Sign Out?"); // Set sign in text (which is the dialog title) to Sign Out?
             signedInSet(true); // Set signed in to yes
         }
     });

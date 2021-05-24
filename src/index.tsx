@@ -84,7 +84,7 @@ function AccountDialog(props: { handleClose: () => void }) {
     const uid = firebase.auth()?.currentUser?.uid;
     firebase.database().ref(`/users/${uid}/linkedmc/`).once("value").then((snapshot: firebase.database.DataSnapshot) => {
         const snapshotval = snapshot.val();
-        if (snapshotval?.linked) {
+        if (snapshotval?.linked === "1") {
             setMcAvatar(snapshotval.uuid);
             setMcUsername(snapshotval.username);
             setMcLinked(true);

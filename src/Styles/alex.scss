@@ -6,9 +6,6 @@
     margin: 0;
 }
 
-.s3-heading {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
 
 .main {
     max-width: 1600px;
@@ -21,23 +18,21 @@
 .logos {
     margin: auto;
     display: block;
-    height: 400px;
-    margin-top: -125px;
-    margin-bottom: -100px;
+    max-width: 70%;
+    max-height: 400px;
 }
 
 .outerboxleft {
     background-image: linear-gradient(45deg, rgba(64, 209, 255, 1) 0%, #00ffae 100%);
-    border-radius: 5px;
+    border-radius: 4px;
     width: 45%;
     max-width: 640px;
     display: inline-block;
-    margin: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
 .innerboxleft {
-    border-radius: 5px;
+    border-radius: 4px;
     width: 100%;
     height: auto;
     vertical-align: middle;
@@ -49,20 +44,16 @@
 }
 
 .textarearight {
-    width: 40%;
     display: inline-block;
     vertical-align: middle;
-    margin: 30px;
     text-align: left;
 }
 
 .outerboxright {
     background-image: linear-gradient(135deg, rgb(169, 64, 255) 0%, #0084ff 100%);
-    border-radius: 5px;
-    width: 45%;
+    border-radius: 4px;
     max-width: 640px;
     display: inline-block;
-    margin: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
@@ -74,7 +65,7 @@
 }
 
 .innerboxright {
-    border-radius: 5px;
+    border-radius: 4px;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -83,18 +74,14 @@
     top: 0;
     margin-top: -7%;
     margin-bottom: 7%;
-    margin-left: 4%;
+    margin-left: 3.5%;
     display: inline-block;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
 .textarealeft {
-    width: 40%;
-    display: inline-block;
     vertical-align: middle;
-    margin: 30px;
     text-align: right;
-    margin-top: -25.5%
 }
 
 .cssanimation,
@@ -126,32 +113,15 @@ mark {
 
 .marki {
     background-color: rgba(0, 0, 0, 0);
-    color: #121212;
     background-size: 100% 100%;
     background-position: 0% 0%;
     padding-left: 3px;
     padding-right: 3px;
-    background-image: linear-gradient(white, white);
-    background-repeat: no-repeat;
-    animation: 2s ease-in-out 0s 1 markianimation;
-}
-
-@keyframes markianimation {
-    0% {
-        background-position: -100% 0%;
-        background-size: 4px 100%;
-        color: white;
-    }
-    100% {
-        color: black;
-        background-size: 100% 100%;
-        background-position: 0% 0%;
-        background-image: linear-gradient(white, white);
-    }
 }
 
 .scaleimg {
     transition: all 0.5s ease;
+    z-index: 99999999999;
 }
 
 .scaleimg:hover {
@@ -199,7 +169,7 @@ mark {
     color: #121212;
     background: #FFF;
     padding: 10px 10px;
-    min-width: 320px;
+    min-width: 15rem;
     height: 50px;
     border: 3px solid #121212;
     font-size: 16px;
@@ -268,4 +238,30 @@ a:link {
 
 a:visited {
     color: #323232
+}
+@media (max-width: 600px) {
+    .logos {
+        max-width: 80%;
+    }
+    .textarearight, .textarealeft{
+        text-align: revert;
+    }
+    .discordboxiframe {
+        order: 1;
+    }
+    .discordtext {
+        order:2;
+    }
+}
+
+.s3-cardtop {
+    height: 150px;
+    width: 100%;
+    color: white;
+    font-size: 72px;
+    background-image: linear-gradient(90deg, rgb(169, 64, 255) 0%, #0084ff 100%);
+}
+.s3-cardtop-icon {
+    vertical-align: middle;
+    height:100%;
 }

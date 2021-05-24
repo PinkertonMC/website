@@ -9,6 +9,8 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle"; // Import acco
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"; // Import Chevron Icon
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import HomeIcon from "@material-ui/icons/Home"; // Import Home Icon
+import LinkIcon from "@material-ui/icons/Link";
+import LinkOffIcon from "@material-ui/icons/LinkOff";
 import Looks3Icon from "@material-ui/icons/Looks3"; // Import 3 icon
 import LooksTwoIcon from "@material-ui/icons/LooksTwo"; // Import 3 icon
 import MenuIcon from "@material-ui/icons/Menu"; // Import Menu Icon
@@ -22,6 +24,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"; // Import 
 import { BrowserRouter as Router, Link, Route, Switch as RouterSwitch } from "react-router-dom"; // Import router to have multiple pagers, route to define pages, switch for the router switch, and link to link pages with react-router
 
 import FirebaseConfig from "./Configs/FirebaseConfig";
+import copy from "./Snippets/Copy";
 import useStyles from "./Styles/styles"; // Import our styles
 import SuspenseLoader from "./Util/SuspenseLoader";
 // Page Imports
@@ -77,13 +80,17 @@ function AccountDialog(props: { handleClose: () => void }) {
     const globalStyles: ClassNameMap<string> = useStyles(); // Import global styles
     const [mcAvatar, setMcAvatar] = React.useState("c06f8906-4c8a-4911-9c29-ea1dbd1aab82");
     const [mcUsername, setMcUsername] = React.useState("Loading...");
-    firebase.database().ref(`/users/${firebase.auth()?.currentUser?.uid}/linkedmc/`).once("value").then((snapshot: firebase.database.DataSnapshot) => {
+    const [mcLinked, setMcLinked] = React.useState(true);
+    const uid = firebase.auth()?.currentUser?.uid;
+    firebase.database().ref(`/users/${uid}/linkedmc/`).once("value").then((snapshot: firebase.database.DataSnapshot) => {
         const snapshotval = snapshot.val();
         if (snapshotval?.linked) {
             setMcAvatar(snapshotval.uuid);
             setMcUsername(snapshotval.username);
+            setMcLinked(true);
         } else {
             setMcUsername("No Account Linked!");
+            setMcLinked(false);
         }
     });
     return (
@@ -96,8 +103,10 @@ function AccountDialog(props: { handleClose: () => void }) {
                     </Grid>
                     <Grid item style={{ flexGrow: 1 }}>
                         <List> {/* Start list */}
-                            <ListItemText primary={mcUsername} secondary="Linked Minecraft Account" />
+                            {mcLinked ? <ListItemText primary={mcUsername} secondary="Linked Minecraft Account" /> : <ListItem button onClick={() => { copy(`/linkacc ${uid}`); }}><ListItemIcon><LinkIcon /></ListItemIcon><ListItemText primary="Link Account" secondary={`Do /linkacc ${firebase.auth()?.currentUser?.uid} to link. Click to copy.`} /></ListItem>}
                             <ListSubheader>Options</ListSubheader> {/* Options subheader */}
+                            {mcLinked ? <ListItem button onClick={() => { firebase.database().ref(`/users/${uid}/linkedmc/linked`).set("0"); firebase.database().ref(`/users/${firebase.auth()?.currentUser?.uid}/linkedmc/username`).remove(); firebase.database().ref(`/users/${firebase.auth()?.currentUser?.uid}/linkedmc/uuid`).remove(); }}><ListItemIcon><LinkOffIcon /></ListItemIcon><ListItemText primary="Unlink Minecraft Account" /></ListItem> : ""}
+
                             <ListItem button onClick={() => { firebase.auth().signOut(); window.location.reload(); }}>
                                 {/* Note for later: I was doing the link account button thing */}
                                 <ListItemIcon>
@@ -105,7 +114,6 @@ function AccountDialog(props: { handleClose: () => void }) {
                                 </ListItemIcon>
                                 <ListItemText primary="Sign Out" />
                             </ListItem>
-
                             {firebase.auth().currentUser?.providerData[0]?.providerId === "password" ? // If the user's provider is email, which is known as password to Firebase
                                 <> {/* JSX parent holder element */}
                                     <ListSubheader>Email Account Settings</ListSubheader> {/* List subheader for account settings */}

@@ -1,6 +1,6 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
 import GroupIcon from "@material-ui/icons/Group";

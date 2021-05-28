@@ -15,7 +15,7 @@
     "@types/react-router-dom": "^5.1.7",
     "clsx": "^1.1.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "firebase": "^8.6.1",
+    "firebase": "^8.6.3",
     "normalize.css": "^8.0.1",
     "notistack": "^1.0.7",
     "react": "^17.0.2",

@@ -31,6 +31,7 @@ import SuspenseLoader from "./Util/SuspenseLoader";
 const HomePage = React.lazy(() => import("./Pages/Home"));
 const SeasonThree = React.lazy(() => import("./Pages/Season3"));
 const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
+const AboutPage = React.lazy(() => import("./Pages/About"));
 // End Page Imports
 
 // set default theme
@@ -76,6 +77,7 @@ function DrawerTop(): JSX.Element {
         </>
     );
 }
+
 function AccountDialog(props: { handleClose: () => void }) {
     const globalStyles: ClassNameMap<string> = useStyles(); // Import global styles
     const [mcAvatar, setMcAvatar] = React.useState("c06f8906-4c8a-4911-9c29-ea1dbd1aab82");
@@ -99,7 +101,7 @@ function AccountDialog(props: { handleClose: () => void }) {
             <DialogContent className={globalStyles.dialog}> {/* Start dialog content wrapper*/}
                 <Grid container spacing={2}>
                     <Grid item>
-                        <img src={`https://crafatar.com/renders/body/${mcAvatar}`} alt="Your Minecraft Avatar" style={{ filter: "drop-shadow(0px 0px 6px)" }} />
+                        <img src={`https://crafatar.com/renders/body/${mcAvatar}?default=MHF_Steve`} alt="Your Minecraft Avatar" style={{ filter: "drop-shadow(0px 0px 6px)" }} />
                     </Grid>
                     <Grid item style={{ flexGrow: 1 }}>
                         <List> {/* Start list */}
@@ -301,6 +303,9 @@ function MainApp(): JSX.Element {
                 <Suspense fallback={<SuspenseLoader />}>
                     <RouterSwitch>
                         {/* Start game URLS */}
+                        <Route path="/about">
+                            <AboutPage />
+                        </Route>
                         <Route path="/season3">
                             <SeasonThree />
                         </Route>

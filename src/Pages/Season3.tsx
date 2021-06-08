@@ -1,15 +1,15 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
 import GroupIcon from "@material-ui/icons/Group";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import LandscapeIcon from "@material-ui/icons/Landscape";
 import SecurityRoundedIcon from "@material-ui/icons/SecurityRounded";
-import StorageIcon from "@material-ui/icons/Storage";
 
-import copy from "../Snippets/Copy";
+import ShowOffCardRight from "../Snippets/ShowOffCards/ShowOffCardRight";
+
 
 export default function SeasonThreePage(): JSX.Element {
     document.title = "Season 3 | PinkertonMC";
@@ -52,30 +52,7 @@ export default function SeasonThreePage(): JSX.Element {
                         </Grid>
                     </Grid>
                 </div>
-                <div className="box">
-                    <Grid container spacing={3}>
-                        <Grid item sm={6} style={{ display: "flex", alignItems: "center" }} className="discordtext">
-                            <div>
-                                <div className="textarealeft cssanimation fadeInBottom" style={{ width: "100%" }}>
-                                    <h1>An <mark>active</mark> and <mark>growing</mark> community.</h1>
-                                    <p>PinkertonMC has an active and growing community of players, builders, developers, and admins. In the Discord server, you can ask questions, get help, just chat, or post your creations. We've also linked server chat to the Discord server, so you can chat multi-platform and have fun both ways.</p>
-                                    <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<GroupIcon />} onClick={() => { window.open("https://discord.io/pinkerton", "_blank"); }}>
-                                        Join Our Community
-                                    </Button>
-                                </div>
-                            </div>
-                        </Grid>
-                        <Grid item sm={6} style={{ width: "100%" }} className="discordboxiframe">
-                            <div style={{ paddingTop: "7%", paddingRight: "4%" }}>
-                                <div className="outerboxright cssanimation fadeInBottom" style={{ width: "100%" }}>
-                                    <div className="aspect-ratio">
-                                        <iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </Grid>
-                    </Grid>
-                </div>
+                <ShowOffCardRight buttonText="Join our Community" buttonStartIcon={<GroupIcon />} buttonClickLink="https://discord.io/pinkerton" text="PinkertonMC has an active and growing community of players, builders, developers, and admins. In the Discord server, you can ask questions, get help, just chat, or post your creations. We've also linked server chat to the Discord server, so you can chat multi-platform and have fun both ways." textHeading={<h1>An <mark>active</mark> and <mark>growing</mark> community.</h1>} cardContent={<iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe>} cardContentDescription="PinkertonMC Discord" />
                 <div className="box">
                     <Grid container spacing={3}>
                         <Grid item sm={6} style={{ width: "100%", display: "flex" }}>
@@ -147,17 +124,20 @@ export default function SeasonThreePage(): JSX.Element {
                         </Grid>
                     </Grid>
                     <h1>Ready to Play?</h1>
-                    <p>Click the button below to copy the Server Address:</p>
-                    <div style={{ display: "block" }}>
-                        <Button variant="outlined" className="homepagebutton" onClick={() => { copy("mc.reedystudents.games") }} startIcon={<StorageIcon />} style={{ marginBottom: "1rem" }}>
-                            Java Edition
-                        </Button>
-                    </div>
-                    <Button variant="outlined" className="homepagebutton" onClick={() => { copy("geyser.mc.reedystudents.games") }} startIcon={<StorageIcon />}>
-                        Bedrock Edition
-                    </Button>
+                    <p>Follow the instructions below to join.</p>
+                    <Stepper activeStep={-1} alternativeLabel>
+                        <Step>
+                            <StepLabel>Get the Server Address from the homepage & join.</StepLabel>
+                        </Step>
+                        <Step>
+                            <StepLabel>Go through the S3 Portal in the lobby or type <code>/server seasonthree</code>.</StepLabel>
+                        </Step>
+                        <Step>
+                            <StepLabel>Profit.</StepLabel>
+                        </Step>
+                    </Stepper>
                 </div>
-            </div >
-        </div >
+            </div>
+        </div>
     );
 }

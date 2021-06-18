@@ -1,6 +1,6 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, SvgIcon, Typography } from "@material-ui/core";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, SvgIcon, Typography } from "@material-ui/core";
 import LocalMallRoundedIcon from "@material-ui/icons/LocalMallRounded";
 import StorageIcon from "@material-ui/icons/Storage";
 
@@ -9,14 +9,18 @@ export default function HomePage(): JSX.Element {
     document.title = "PinkertonMC";
     return (
         <div className="text-center s3-body">
-            <Card color="primary" style={{ marginBottom: "2rem" }} className="head">
-                <img src="/assets/images/transparentLogo.svg" className="logos" alt="Pinkerton Season 3 logo" />
-                <h1 className="s3-heading">
-                    <div className="marki markianimation">Welcome to The Pinkerton Minecraft Server Network.</div>
-                </h1>
-                <h3>
-                    According to all known laws of avation, there is no way a bee should be able to fly. It's tiny wings are just to small to get its fat little body off the ground.
-                </h3>
+            <Card color="primary" style={{ marginBottom: "2rem" }}>
+                <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head">
+                    <img src="/assets/images/home/pinkertonrevival.svg" className="logos" alt="Pinkerton: The Revival" />
+                    <h1 className="s3-heading" style={{ marginBottom: 0 }}>
+                        <div className="marki markianimation">
+                            Something is Coming
+                        </div>
+                    </h1>
+                    <h3>
+                        Get a Sneak Peak
+                    </h3>
+                </CardActionArea>
             </Card>
             <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
                 <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
@@ -53,70 +57,76 @@ export default function HomePage(): JSX.Element {
             <h2>Our Servers</h2>
             <Grid container justify="center" spacing={2}>
                 <Grid item>
-                    <Card variant="outlined" color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                        <CardMedia
-                            image="/assets/images/s3teaser.png"
-                            title="Pinkerton S3 Show-Off Image"
-                            component="img"
-                        />
-                        <CardContent style={{ flexGrow: 1 }}>
-                            <Typography component="h5" variant="h5">
-                                Pinkerton Season 3
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary">
-                                An All New Minecraft Experience
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Learn More
-                            </Button>
-                        </CardActions>
-                    </Card>
+                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
+                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
+                            <CardMedia
+                                image="/assets/images/s3teaser.png"
+                                title="Pinkerton S3 Show-Off Image"
+                                component="img"
+                            />
+                            <CardContent style={{ flexGrow: 1 }}>
+                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                    Pinkerton Season 3
+                                </Typography>
+                                <Typography variant="subtitle1" color="textSecondary">
+                                    An All New Minecraft Experience
+                                </Typography>
+                            </CardContent>
+                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
+                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
+                                    Learn More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 </Grid>
                 <Grid item>
-                    <Card variant="outlined" color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                        <CardMedia
-                            image="/assets/images/s3teaser.png"
-                            title="Pinkerton S3 Show-Off Image"
-                            component="img"
-                        />
-                        <CardContent style={{ flexGrow: 1 }}>
-                            <Typography component="h5" variant="h5">
-                                Pinkerton Classic
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary">
-                                Classic MC SMP
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Learn More
-                            </Button>
-                        </CardActions>
-                    </Card>
+                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
+                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
+                            <CardMedia
+                                image="/assets/images/s3teaser.png"
+                                title="Pinkerton S3 Show-Off Image"
+                                component="img"
+                            />
+                            <CardContent style={{ flexGrow: 1 }}>
+                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                    Pinkerton Classic
+                                </Typography>
+                                <Typography variant="subtitle1" color="textSecondary">
+                                    Classic MC SMP
+                                </Typography>
+                            </CardContent>
+                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
+                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
+                                    Learn More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 </Grid>
                 <Grid item>
-                    <Card variant="outlined" color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                        <CardMedia
-                            image="/assets/images/s3teaser.png"
-                            title="Pinkerton S3 Show-Off Image"
-                            component="img"
-                        />
-                        <CardContent style={{ flexGrow: 1 }}>
-                            <Typography component="h5" variant="h5">
-                                Pinkerton Minigames
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary">
-                                Tons of Minigames
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Learn More
-                            </Button>
-                        </CardActions>
-                    </Card>
+                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
+                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
+                            <CardMedia
+                                image="/assets/images/s3teaser.png"
+                                title="Pinkerton S3 Show-Off Image"
+                                component="img"
+                            />
+                            <CardContent style={{ flexGrow: 1 }}>
+                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                    Pinkerton Minigames
+                                </Typography>
+                                <Typography variant="subtitle1" color="textSecondary">
+                                    Tons of Minigames
+                                </Typography>
+                            </CardContent>
+                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
+                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
+                                    Learn More
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 </Grid>
             </Grid>
             <h1>Ready to Play?</h1>

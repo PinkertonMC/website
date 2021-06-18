@@ -1,6 +1,6 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
 import GroupIcon from "@material-ui/icons/Group";
@@ -8,6 +8,7 @@ import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import LandscapeIcon from "@material-ui/icons/Landscape";
 import SecurityRoundedIcon from "@material-ui/icons/SecurityRounded";
 
+import ShowOffCardLeft from "../Snippets/ShowOffCards/ShowOffCardLeft";
 import ShowOffCardRight from "../Snippets/ShowOffCards/ShowOffCardRight";
 
 
@@ -30,49 +31,10 @@ export default function SeasonThreePage(): JSX.Element {
                         <p>Whether you're a new player just starting out or a Minecraft pro, Season 3 is right for you.</p>
                         <hr />
                     </div>
-                    <Grid container spacing={5}>
-                        <Grid item sm={6}>
-                            <div style={{ paddingTop: "7%", paddingLeft: "3.5%" }}>
-                                <div className="outerboxleft cssanimation fadeInBottom" style={{ width: "100%" }}>
-                                    <a href="/assets/images/terrain.png"><img className="innerboxleft scaleimg" src="/assets/images/terrain.png" alt="Pinkerton S3 Terrain" /></a>
-                                </div>
-                            </div>
-                        </Grid>
-                        <Grid item sm={6} style={{ display: "flex", alignItems: "center" }}>
-                            <div className="textarearight cssanimation fadeInBottom">
-                                <h1>It's got <mark>custom</mark> world generation.</h1>
-                                <p>Season 3 brings custom world generation with the legendary plugin <a href="https://www.spigotmc.org/resources/terra.85151/">Terra</a> and custom config. Experience
-                        this for yourself with custom biomes, more natural materials, and
-                        better terrain variation. We've also included <code>/wild</code>, which lets you find a remote spot to start a
-                        life in Pinkerton S3.</p>
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LandscapeIcon />}>
-                                    Learn More
-                                </Button>
-                            </div>
-                        </Grid>
-                    </Grid>
                 </div>
+                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text={<p>Season 3 brings custom world generation with the legendary plugin <a href="https://www.spigotmc.org/resources/terra.85151/">Terra</a> and custom config. Experience this for yourself with custom biomes, more natural materials, and better terrain variation. We've also included <code>/wild</code>, which lets you find a remote spot to start a life in Pinkerton S3.</p>} textHeading={<h1>It's got <mark>custom</mark> world generation.</h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton S3 Terrain" />
                 <ShowOffCardRight buttonText="Join our Community" buttonStartIcon={<GroupIcon />} buttonClickLink="https://discord.io/pinkerton" text="PinkertonMC has an active and growing community of players, builders, developers, and admins. In the Discord server, you can ask questions, get help, just chat, or post your creations. We've also linked server chat to the Discord server, so you can chat multi-platform and have fun both ways." textHeading={<h1>An <mark>active</mark> and <mark>growing</mark> community.</h1>} cardContent={<iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe>} cardContentDescription="PinkertonMC Discord" />
-                <div className="box">
-                    <Grid container spacing={3}>
-                        <Grid item sm={6} style={{ width: "100%", display: "flex" }}>
-                            <div style={{ paddingTop: "7%", width: "100%", height: "100%", paddingLeft: "3.5%" }}>
-                                <div className="outerboxleft cssanimation fadeInBottom" style={{ width: "100%" }}>
-                                    <a href="/assets/images/customitems.png"><img className="innerboxleft scaleimg" src="/assets/images/customitems.png" alt="Pinkerton S3 Custom Items" /></a>
-                                </div>
-                            </div>
-                        </Grid>
-                        <Grid item sm={6} style={{ display: "flex", alignItems: "center" }}>
-                            <div className="textarearight cssanimation fadeInBottom">
-                                <h1>With custom <mark>tools</mark> and <mark>items</mark>.</h1>
-                                <p>Pinkerton Season 3 has many custom items, including emerald tools, emerald armor, emerald netherite armor, and more food items. We've also made previously uncraftable items craftable, such as horse armor, saddles, name tags, and more. All of these recipies also work in the crafting guide, so you don't have to memorize anything.</p>
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<BuildIcon />}>
-                                    Learn More
-                                </Button>
-                            </div>
-                        </Grid>
-                    </Grid>
-                </div>
+                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<BuildIcon />} buttonClickLink="https://discord.io/pinkerton" text="Pinkerton Season 3 has many custom items, including emerald tools, emerald armor, emerald netherite armor, and more food items. We've also made previously uncraftable items craftable, such as horse armor, saddles, name tags, and more. All of these recipies also work in the crafting guide, so you don't have to memorize anything." textHeading={<h1>With custom <mark>tools</mark> and <mark>items</mark>.</h1>} cardContent="/assets/images/customitems.png" cardContentDescription="Pinkerton S3 Custom Items" />
 
                 <div className="box cssanimation fadeInBottom">
                     <h1>Other Features</h1>

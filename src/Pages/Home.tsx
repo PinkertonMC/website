@@ -38,7 +38,7 @@ export default function HomePage(): JSX.Element {
                             New Merch Available!
                         </Typography>
                         <Typography variant="subtitle1" color="textSecondary">
-                            Visit our store on RedBubble to buy our merch. It's high quality and long-lasing, and we get a cut of the profit to help develop our server.                    </Typography>
+                            Visit our store on RedBubble to buy our merch. It's high quality and long-lasting, and we get a cut of the profit to help develop our server.                    </Typography>
                     </CardContent>
                     <CardActions style={{ width: "100%", justifyContent: "center" }}>
                         <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>

@@ -60,7 +60,7 @@ export default function HomePage(): JSX.Element {
                     <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
                         <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
                             <CardMedia
-                                image="/assets/images/s3teaser.png"
+                                image="/assets/images/s3teaser.webp"
                                 title="Pinkerton S3 Show-Off Image"
                                 component="img"
                             />
@@ -84,7 +84,7 @@ export default function HomePage(): JSX.Element {
                     <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
                         <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
                             <CardMedia
-                                image="/assets/images/s3teaser.png"
+                                image="/assets/images/s3teaser.webp"
                                 title="Pinkerton S3 Show-Off Image"
                                 component="img"
                             />
@@ -108,7 +108,7 @@ export default function HomePage(): JSX.Element {
                     <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
                         <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
                             <CardMedia
-                                image="/assets/images/s3teaser.png"
+                                image="/assets/images/s3teaser.webp"
                                 title="Pinkerton S3 Show-Off Image"
                                 component="img"
                             />

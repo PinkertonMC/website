@@ -20,9 +20,7 @@ export default function ShowOffCardRight(props: { buttonText: string, buttonStar
                 <Grid item sm={6} style={{ width: "100%" }} className="discordboxiframe">
                     <div style={{ paddingTop: "7%", paddingRight: "4%" }}>
                         <div className="outerboxright cssanimation fadeInBottom" style={{ width: "100%" }}>
-                            <div className="aspect-ratio">
-                                {typeof props.cardContent == "string" ? <img className="innerboxleft scaleimgl" src={(props.cardContent) as string} alt={props.cardContentDescription} /> : props.cardContent}                            </div>
-                        </div>
+                            {typeof props.cardContent == "string" ? <img className="innerboxleft scaleimgl" style={{ marginLeft: "4%" }} src={(props.cardContent) as string} alt={props.cardContentDescription} /> : props.cardContent}                            </div>
                     </div>
                 </Grid>
             </Grid>

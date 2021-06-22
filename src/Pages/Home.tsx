@@ -1,52 +1,48 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, SvgIcon, Typography } from "@material-ui/core";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, IconButton, SvgIcon, Typography } from "@material-ui/core";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import GroupIcon from "@material-ui/icons/Group";
+import LandscapeIcon from "@material-ui/icons/Landscape";
 import LocalMallRoundedIcon from "@material-ui/icons/LocalMallRounded";
 import StorageIcon from "@material-ui/icons/Storage";
 
+import Carousel from "../Snippets/Carousel";
 import copy from "../Snippets/Copy";
+import ShowOffCardLeft from "../Snippets/ShowOffCards/ShowOffCardLeft";
+import ShowOffCardRight from "../Snippets/ShowOffCards/ShowOffCardRight";
 export default function HomePage(): JSX.Element {
     document.title = "PinkertonMC";
     return (
         <div className="text-center s3-body">
-            <Card color="primary" style={{ marginBottom: "2rem" }}>
-                <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head">
-                    <img src="/assets/images/home/pinkertonrevival.svg" className="logos" alt="Pinkerton: The Revival" />
-                    <h1 className="s3-heading" style={{ marginBottom: 0 }}>
-                        <div className="marki markianimation">
-                            Something is Coming
-                        </div>
-                    </h1>
-                    <h3>
-                        Get a Sneak Peak
-                    </h3>
-                </CardActionArea>
-            </Card>
-            <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
-                <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                    <CardMedia className="s3-cardtop">
-                        <SvgIcon fontSize="inherit" className="s3-cardtop-icon" viewBox="0 0 42.5 42.5">
-                            <circle cx="21.25" cy="21.25" r="21.25" color="#FFFFFF" />
-                            <path color="#E41321" d="M29,28.5h-5.3c-0.3,0-0.5-0.2-0.5-0.5V14.6c0-0.3,0.2-0.5,0.5-0.5h4.9c3.7,0,4.5,2.2,4.5,4
-	                    c0,1.1-0.3,1.9-0.8,2.5c1.4,0.6,2.1,1.8,2.1,3.7C34.3,26.9,32.3,28.5,29,28.5 M21.2,28.5H10.1c-0.3,0-0.5-0.2-0.5-0.5l0,0V14.6
-	                    c0-0.3,0.2-0.5,0.5-0.5h5.2c3.2,0,5.2,1.7,5.2,4.7c0,1.9-1,3.5-2.5,4.1l3.7,4.8c0.2,0.2,0.2,0.6-0.1,0.8
-	                    C21.5,28.5,21.3,28.5,21.2,28.5 M21.2,1.2c-11,0-20,8.9-20,20c0,11,8.9,20,20,20s20-8.9,20-20S32.2,1.2,21.2,1.2" />
-                        </SvgIcon>
-                    </CardMedia>
-                    <CardContent style={{ flexGrow: 1 }}>
-                        <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
-                            New Merch Available!
-                        </Typography>
-                        <Typography variant="subtitle1" color="textSecondary">
-                            Visit our store on RedBubble to buy our merch. It's high quality and long-lasting, and we get a cut of the profit to help develop our server.                    </Typography>
-                    </CardContent>
-                    <CardActions style={{ width: "100%", justifyContent: "center" }}>
-                        <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
-                            Get the Goods
-                        </Button>
-                    </CardActions>
+            <Carousel>
+                <Card color="primary">
+                    <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head">
+                        <img src="/assets/images/home/pinkertonrevival.svg" className="logos" alt="Pinkerton: The Revival" />
+                        <h1 className="s3-heading" style={{ marginBottom: 0 }}>
+                            <div className="marki markianimation">
+                                Something is Coming
+                            </div>
+                        </h1>
+                        <h3>
+                            Get a Sneak Peak
+                        </h3>
+                    </CardActionArea>
                 </Card>
-            </div>
+                <Card color="primary">
+                    <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head" style={{ backgroundImage: "linear-gradient(90deg, #a940ff 0%, #0084ff 100%)" }}>
+                        <img src="/assets/images/home/redbubble.svg" className="logos" alt="Redbubble Logo" />
+                        <h1 className="s3-heading" style={{ marginBottom: 0 }}>
+                            <div className="marki markianimation">
+                                New Merch Available
+                            </div>
+                        </h1>
+                        <h3>
+                            Click to check it out!
+                        </h3>
+                    </CardActionArea>
+                </Card>
+            </Carousel>
             <div className="textheader cssanimation fadeInBottom" style={{ marginBottom: "2rem" }}>
                 <h2>Why should you join PinkertonMC?</h2>
                 <p>
@@ -54,81 +50,12 @@ export default function HomePage(): JSX.Element {
                 </p>
                 <hr />
             </div>
-            <h2>Our Servers</h2>
-            <Grid container justify="center" spacing={2}>
-                <Grid item>
-                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
-                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                            <CardMedia
-                                image="/assets/images/s3teaser.webp"
-                                title="Pinkerton S3 Show-Off Image"
-                                component="img"
-                            />
-                            <CardContent style={{ flexGrow: 1 }}>
-                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
-                                    Pinkerton Season 3
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    An All New Minecraft Experience
-                                </Typography>
-                            </CardContent>
-                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </div>
-                </Grid>
-                <Grid item>
-                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
-                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                            <CardMedia
-                                image="/assets/images/s3teaser.webp"
-                                title="Pinkerton S3 Show-Off Image"
-                                component="img"
-                            />
-                            <CardContent style={{ flexGrow: 1 }}>
-                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
-                                    Pinkerton Classic
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    Classic MC SMP
-                                </Typography>
-                            </CardContent>
-                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </div>
-                </Grid>
-                <Grid item>
-                    <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
-                        <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
-                            <CardMedia
-                                image="/assets/images/s3teaser.webp"
-                                title="Pinkerton S3 Show-Off Image"
-                                component="img"
-                            />
-                            <CardContent style={{ flexGrow: 1 }}>
-                                <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
-                                    Pinkerton Minigames
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    Tons of Minigames
-                                </Typography>
-                            </CardContent>
-                            <CardActions style={{ width: "100%", justifyContent: "center" }}>
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={<LocalMallRoundedIcon />}>
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </div>
-                </Grid>
-            </Grid>
+            <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="Pinkerton Classic is the classic SMP experience you know and love, with some improvements, such as better sleeping, an auction house for selling your items, concrete creation in cauldrons, chest shops, and much more." textHeading={<h1>A <mark>Classic SMP.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Classic Goverment Headquarters" />
+            <ShowOffCardRight buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="With Pinkerton Season 3, a brand new SMP experience arrives, with custom terrain that has new mountains, emerald tools that are between netherite, and much more." textHeading={<h1>A <mark>brand-new approach</mark> to Minecraft SMPs.</h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton S3 Terrain" />
+            <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="Classic Minigames, such as bedwars, skywars, PvE, Parkor, and even new ones, such as Among Us in Minecraft." textHeading={<h1><mark>Classic Minigames,</mark> with a <mark>twist.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Minigames" />
+
+            <ShowOffCardRight buttonText="Join our Community" buttonStartIcon={<GroupIcon />} buttonClickLink="https://discord.io/pinkerton" text="PinkertonMC has an active and growing community of players, builders, developers, and admins. In the Discord server, you can ask questions, get help, just chat, or post your creations. We've also linked the server chats to the Discord server, so you can chat multi-platform and have fun both ways." textHeading={<h1>An <mark>active</mark> and <mark>growing</mark> community.</h1>} cardContent={<div className="aspect-ratio"><iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe></div>} cardContentDescription="PinkertonMC Discord" />
+
             <h1>Ready to Play?</h1>
             <p>Click the button below to copy the Server Address:</p>
             <div style={{ display: "block" }}>

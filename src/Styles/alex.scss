@@ -19,7 +19,7 @@
     margin: auto;
     display: block;
     max-width: 70%;
-    max-height: 400px;
+    max-height: 15rem;
 }
 
 .outerboxleft {
@@ -264,3 +264,43 @@ a:visited {
     vertical-align: middle;
     height:100%;
 }
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+.carouselSlideIn {
+    opacity: 1;
+    animation: fadeIn 0.5s linear;
+}
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
+.carouselSlideOut {
+    opacity: 1;
+    animation: fadeOut 0.5s linear;
+}
+.item-enter {
+    opacity: 0;
+  }
+  .item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .item-exit {
+    opacity: 1;
+  }
+  .item-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }

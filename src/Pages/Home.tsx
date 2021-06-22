@@ -1,10 +1,8 @@
 import "../Styles/alex.scss";
 
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, IconButton, SvgIcon, Typography } from "@material-ui/core";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { Button, Card, CardActionArea } from "@material-ui/core";
 import GroupIcon from "@material-ui/icons/Group";
 import LandscapeIcon from "@material-ui/icons/Landscape";
-import LocalMallRoundedIcon from "@material-ui/icons/LocalMallRounded";
 import StorageIcon from "@material-ui/icons/Storage";
 
 import Carousel from "../Snippets/Carousel";
@@ -30,7 +28,7 @@ export default function HomePage(): JSX.Element {
                     </CardActionArea>
                 </Card>
                 <Card color="primary">
-                    <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head" style={{ backgroundImage: "linear-gradient(90deg, #a940ff 0%, #0084ff 100%)" }}>
+                    <CardActionArea onClick={() => { window.open("https://www.redbubble.com/people/pinkertonmc/shop", "_blank") }} className="head" style={{ backgroundImage: "linear-gradient(90deg, #a940ff 0%, #0084ff 100%)" }}>
                         <img src="/assets/images/home/redbubble.svg" className="logos" alt="Redbubble Logo" />
                         <h1 className="s3-heading" style={{ marginBottom: 0 }}>
                             <div className="marki markianimation">

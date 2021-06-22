@@ -3,7 +3,6 @@ import "../Styles/alex.scss";
 import { Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
-import GroupIcon from "@material-ui/icons/Group";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import LandscapeIcon from "@material-ui/icons/Landscape";
 import SecurityRoundedIcon from "@material-ui/icons/SecurityRounded";

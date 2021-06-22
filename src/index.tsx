@@ -29,6 +29,7 @@ import useStyles from "./Styles/styles"; // Import our styles
 import SuspenseLoader from "./Util/SuspenseLoader";
 // Page Imports
 const HomePage = React.lazy(() => import("./Pages/Home"));
+const ClassicPage = React.lazy(() => import("./Pages/Classic"));
 const SeasonThree = React.lazy(() => import("./Pages/Season3"));
 const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
 const AboutPage = React.lazy(() => import("./Pages/About"));
@@ -287,11 +288,11 @@ function MainApp(): JSX.Element {
                         <ListItemIcon><Looks3Icon /></ListItemIcon>
                         <ListItemText primary="Season 3" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/minigames">
                         <ListItemIcon><VideogameAssetIcon /></ListItemIcon>
                         <ListItemText primary="Minigames" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/classic">
                         <ListItemIcon><LooksTwoIcon /></ListItemIcon>
                         <ListItemText primary="Classic" />
                     </ListItem>
@@ -308,6 +309,9 @@ function MainApp(): JSX.Element {
                         </Route>
                         <Route path="/season3">
                             <SeasonThree />
+                        </Route>
+                        <Route path="/classic">
+                            <ClassicPage />
                         </Route>
                         <Route path="/rick">
                             {() => { rickRoll(); }}

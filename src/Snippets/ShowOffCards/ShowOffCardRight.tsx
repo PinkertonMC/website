@@ -1,8 +1,10 @@
 import "../../Styles/alex.scss";
 
 import { Button, Grid } from "@material-ui/core";
+import { Link } from "react-router-dom"; // Import router to have multiple pagers, route to define pages, switch for the router switch, and link to link pages with react-router
 
-export default function ShowOffCardRight(props: { buttonText: string, buttonStartIcon: JSX.Element, buttonClickLink: string, cardContent: JSX.Element | string, cardContentDescription: string, text: JSX.Element | string, textHeading: JSX.Element | String }): JSX.Element {
+
+export default function ShowOffCardRight(props: { buttonText: string, buttonStartIcon: JSX.Element, buttonClickLink: string, cardContent: JSX.Element | string, cardContentDescription: string, text: JSX.Element | string, textHeading: JSX.Element | String, routerLink?: boolean }): JSX.Element {
     return (
         <div className="box">
             <Grid container spacing={3}>
@@ -11,9 +13,9 @@ export default function ShowOffCardRight(props: { buttonText: string, buttonStar
                         <div className="textarealeft cssanimation fadeInBottom" style={{ width: "100%" }}>
                             {typeof props.textHeading == "string" ? <h1>{props.textHeading}</h1> : props.textHeading}
                             {typeof props.text == "string" ? <p>{props.text}</p> : props.text}
-                            <Button variant="outlined" className="homepagebutton" color="primary" startIcon={props.buttonStartIcon} onClick={() => { window.open(props.buttonClickLink, "_blank"); }}>
-                                {props.buttonText}
-                            </Button>
+                            {props.routerLink ?
+                                <Button variant="outlined" className="homepagebutton" color="primary" component={Link} startIcon={props.buttonStartIcon} to={props.buttonClickLink}>{props.buttonText}</Button> :
+                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={props.buttonStartIcon} onClick={() => { window.open(props.buttonClickLink, "_blank"); }}>{props.buttonText}</Button>}
                         </div>
                     </div>
                 </Grid>

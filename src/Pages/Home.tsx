@@ -3,7 +3,10 @@ import "../Styles/alex.scss";
 import { Button, Card, CardActionArea } from "@material-ui/core";
 import GroupIcon from "@material-ui/icons/Group";
 import LandscapeIcon from "@material-ui/icons/Landscape";
+import LooksTwoIcon from "@material-ui/icons/LooksTwo"; // Import 3 icon
 import StorageIcon from "@material-ui/icons/Storage";
+import VideogameAssetIcon from "@material-ui/icons/VideogameAsset"; // Import Game Icon
+import { useSnackbar } from "notistack"; // Import Notistack for snackbars at bottom of screen.
 
 import Carousel from "../Snippets/Carousel";
 import copy from "../Snippets/Copy";
@@ -11,6 +14,8 @@ import ShowOffCardLeft from "../Snippets/ShowOffCards/ShowOffCardLeft";
 import ShowOffCardRight from "../Snippets/ShowOffCards/ShowOffCardRight";
 export default function HomePage(): JSX.Element {
     document.title = "PinkertonMC";
+    const { enqueueSnackbar } = useSnackbar();
+
     return (
         <div className="text-center s3-body">
             <Carousel>
@@ -49,20 +54,28 @@ export default function HomePage(): JSX.Element {
                 <hr />
             </div>
             <div className="main">
-                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="Pinkerton Classic is the classic SMP experience you know and love, with some improvements, such as better sleeping, an auction house for selling your items, concrete creation in cauldrons, chest shops, and much more." textHeading={<h1>A <mark>Classic SMP.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Classic Goverment Headquarters" />
-                <ShowOffCardRight buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="With Pinkerton Season 3, a brand new SMP experience arrives, with custom terrain that has new mountains, emerald tools that are between netherite, and much more." textHeading={<h1>A <mark>brand-new approach</mark> to Minecraft SMPs.</h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton S3 Terrain" />
-                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="https://discord.io/pinkerton" text="Classic Minigames, such as bedwars, skywars, PvE, Parkor, and even new ones, such as Among Us in Minecraft." textHeading={<h1><mark>Classic Minigames,</mark> with a <mark>twist.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Minigames" />
+                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<LooksTwoIcon />} routerLink buttonClickLink="/classic" text="Pinkerton Classic is the classic SMP experience you know and love, with some improvements, such as better sleeping, an auction house for selling your items, concrete creation in cauldrons, chest shops, and much more." textHeading={<h1>A <mark>Classic SMP.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Classic Goverment Headquarters" />
+                <ShowOffCardRight buttonText="Learn More" buttonStartIcon={<LandscapeIcon />} buttonClickLink="/season3" routerLink text="With Pinkerton Season 3, a brand new SMP experience arrives, with custom terrain that has new mountains, emerald tools that are between netherite, and much more." textHeading={<h1>A <mark>brand-new approach</mark> to Minecraft SMPs.</h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton S3 Terrain" />
+                <ShowOffCardLeft buttonText="Learn More" buttonStartIcon={<VideogameAssetIcon />} routerLink buttonClickLink="/minigames" text="Classic Minigames, such as bedwars, skywars, PvE, Parkor, and even new ones, such as Among Us in Minecraft." textHeading={<h1><mark>Classic Minigames,</mark> with a <mark>twist.</mark></h1>} cardContent="/assets/images/terrain.png" cardContentDescription="Pinkerton Minigames" />
 
                 <ShowOffCardRight buttonText="Join our Community" buttonStartIcon={<GroupIcon />} buttonClickLink="https://discord.io/pinkerton" text="PinkertonMC has an active and growing community of players, builders, developers, and admins. In the Discord server, you can ask questions, get help, just chat, or post your creations. We've also linked the server chats to the Discord server, so you can chat multi-platform and have fun both ways." textHeading={<h1>An <mark>active</mark> and <mark>growing</mark> community.</h1>} cardContent={<div className="aspect-ratio"><iframe className="innerboxright scaleimgl" src="https://discord.com/widget?id=797179595572248597&theme=dark" title="PinkertonMC Discord" style={{ border: 0 }}></iframe></div>} cardContentDescription="PinkertonMC Discord" />
             </div>
             <h1>Ready to Play?</h1>
             <p>Click the button below to copy the Server Address:</p>
             <div style={{ display: "block" }}>
-                <Button variant="outlined" className="homepagebutton" onClick={() => { copy("mc.reedystudents.games") }} startIcon={<StorageIcon />} style={{ marginBottom: "1rem" }}>
+                <Button variant="outlined" className="homepagebutton" onClick={() => {
+                    copy("mc.reedystudents.games"); enqueueSnackbar("Copied link to clipboard!", {
+                        variant: "success",
+                    });
+                }} startIcon={<StorageIcon />} style={{ marginBottom: "1rem" }}>
                     Java Edition
                 </Button>
             </div>
-            <Button variant="outlined" className="homepagebutton" onClick={() => { copy("geyser.mc.reedystudents.games") }} startIcon={<StorageIcon />}>
+            <Button variant="outlined" className="homepagebutton" onClick={() => {
+                copy("geyser.mc.reedystudents.games"); enqueueSnackbar("Copied link to clipboard!", {
+                    variant: "success",
+                });
+            }} startIcon={<StorageIcon />}>
                 Bedrock Edition
             </Button>
         </div >

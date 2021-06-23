@@ -64,7 +64,7 @@ export default function HomePage(): JSX.Element {
             <p>Click the button below to copy the Server Address:</p>
             <div style={{ display: "block" }}>
                 <Button variant="outlined" className="homepagebutton" onClick={() => {
-                    copy("mc.reedystudents.games"); enqueueSnackbar("Copied link to clipboard!", {
+                    copy("play.pinkertonmc.com"); enqueueSnackbar("Copied link to clipboard!", {
                         variant: "success",
                     });
                 }} startIcon={<StorageIcon />} style={{ marginBottom: "1rem" }}>
@@ -72,7 +72,7 @@ export default function HomePage(): JSX.Element {
                 </Button>
             </div>
             <Button variant="outlined" className="homepagebutton" onClick={() => {
-                copy("geyser.mc.reedystudents.games"); enqueueSnackbar("Copied link to clipboard!", {
+                copy("bedrock.pinkertonmc.com"); enqueueSnackbar("Copied link to clipboard!", {
                     variant: "success",
                 });
             }} startIcon={<StorageIcon />}>

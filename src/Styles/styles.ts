@@ -11,6 +11,9 @@ const useStyles: () => ClassNameMap<string> = // Define the styles we will use e
                 duration: theme.transitions.duration.leavingScreen,
             })
         },
+        nested: {
+            paddingLeft: theme.spacing(4),
+        },
         appBarShift: {
             width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: drawerWidth,

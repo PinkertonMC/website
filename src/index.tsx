@@ -3,11 +3,15 @@ import "./Styles/styles.scss";
 import "firebase/database"; // Import Firebase Database component
 import "firebase/auth"; // Import Firebase Authentication component to do what it says
 
-import { AppBar, Avatar, Button, createMuiTheme, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip } from "@material-ui/core"; // Import our Material-UI Components
+import { AppBar, Avatar, Button, Collapse, createMuiTheme, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip } from "@material-ui/core"; // Import our Material-UI Components
 import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle"; // Import account icon, for when user is not logged in for the drawer
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"; // Import Chevron Icon
+import DnsIcon from "@material-ui/icons/Dns";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import GroupIcon from "@material-ui/icons/Group";
 import HomeIcon from "@material-ui/icons/Home"; // Import Home Icon
 import LinkIcon from "@material-ui/icons/Link";
 import LinkOffIcon from "@material-ui/icons/LinkOff";
@@ -31,6 +35,7 @@ import SuspenseLoader from "./Util/SuspenseLoader";
 const HomePage = React.lazy(() => import("./Pages/Home"));
 const ClassicPage = React.lazy(() => import("./Pages/Classic"));
 const SeasonThree = React.lazy(() => import("./Pages/Season3"));
+const MinigamesPage = React.lazy(() => import("./Pages/Minigames"));
 const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
 const AboutPage = React.lazy(() => import("./Pages/About"));
 // End Page Imports
@@ -227,6 +232,8 @@ function MainApp(): JSX.Element {
     const globalStyles: ClassNameMap<string> = useStyles(); // Get styles
     const [drawerOpen, drawerSetOpen] = React.useState<boolean>(false); // Drawer open state
     const [authOpen, authSetOpen] = React.useState<boolean>(false); // If the auth dialog is open or not
+    const [serversOpen, serversSetOpen] = React.useState(false);
+
     const handleDrawerOpen = () => { // Function for drawer open
         drawerSetOpen(true);
     };
@@ -244,6 +251,9 @@ function MainApp(): JSX.Element {
     const handleAuthDialogClose: () => void = () => { // Function for when the authentication dialog is closed
         console.log("closed");
         authSetOpen(false); // Set authentication dialog state to closed
+    };
+    const handleServerClick = () => {
+        serversSetOpen(!serversOpen);
     };
 
     return (
@@ -284,17 +294,32 @@ function MainApp(): JSX.Element {
                         <ListItemIcon><HomeIcon /></ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
-                    <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>
-                        <ListItemIcon><Looks3Icon /></ListItemIcon>
-                        <ListItemText primary="Season 3" />
+                    <ListItem button onClick={handleServerClick}>
+                        <ListItemIcon>
+                            <DnsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Servers" />
+                        {serversOpen ? <ExpandLess /> : <ExpandMore />}
                     </ListItem>
-                    <ListItem button component={Link} to="/minigames">
-                        <ListItemIcon><VideogameAssetIcon /></ListItemIcon>
-                        <ListItemText primary="Minigames" />
-                    </ListItem>
-                    <ListItem button component={Link} to="/classic">
-                        <ListItemIcon><LooksTwoIcon /></ListItemIcon>
-                        <ListItemText primary="Classic" />
+                    <Collapse in={serversOpen} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding className={globalStyles.nested}>
+                            <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>
+                                <ListItemIcon><Looks3Icon /></ListItemIcon>
+                                <ListItemText primary="Season 3" />
+                            </ListItem>
+                            <ListItem button component={Link} to="/minigames" onClick={handleDrawerClose}>
+                                <ListItemIcon><VideogameAssetIcon /></ListItemIcon>
+                                <ListItemText primary="Minigames" />
+                            </ListItem>
+                            <ListItem button component={Link} to="/classic" onClick={handleDrawerClose}>
+                                <ListItemIcon><LooksTwoIcon /></ListItemIcon>
+                                <ListItemText primary="Classic" />
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    <ListItem button component={Link} to="/classic" onClick={handleDrawerClose}>
+                        <ListItemIcon><GroupIcon /></ListItemIcon>
+                        <ListItemText primary="Partners" />
                     </ListItem>
                 </List>
             </Drawer>
@@ -312,6 +337,9 @@ function MainApp(): JSX.Element {
                         </Route>
                         <Route path="/classic">
                             <ClassicPage />
+                        </Route>
+                        <Route path="/minigames">
+                            <MinigamesPage />
                         </Route>
                         <Route path="/rick">
                             {() => { rickRoll(); }}

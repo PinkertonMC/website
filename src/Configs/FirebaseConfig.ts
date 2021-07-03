@@ -1,6 +1,6 @@
 const FirebaseConfig = {
     apiKey: "AIzaSyAWN1hb7WiczASlUOExUpqUzZjYDNo9mfU",
-    authDomain: "pinkertonminecraft.firebaseapp.com",
+    authDomain: "auth.pinkertonmc.com",
     databaseURL: "https://pinkertonminecraft-default-rtdb.firebaseio.com",
     projectId: "pinkertonminecraft",
     storageBucket: "pinkertonminecraft.appspot.com",

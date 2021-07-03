@@ -1,5 +1,3 @@
-import "../../Styles/alex.scss";
-
 import { Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom"; // Import router to have multiple pagers, route to define pages, switch for the router switch, and link to link pages with react-router
 

@@ -1,4 +1,3 @@
-import "./Styles/alex.scss";
 import "normalize.css"; // Import normalize.css (a css reset)
 import "./Styles/styles.scss";
 import "firebase/database"; // Import Firebase Database component

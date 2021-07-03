@@ -1,5 +1,3 @@
-import "../Styles/alex.scss";
-
 import { Button, Card, CardActionArea } from "@material-ui/core";
 import GroupIcon from "@material-ui/icons/Group";
 import LandscapeIcon from "@material-ui/icons/Landscape";

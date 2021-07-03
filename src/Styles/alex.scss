@@ -1,306 +1,305 @@
 .s3-body {
-    background-color: white;
-    font-family: 'Roboto', 'sans-serif';
-    text-align: center;
-    color: #121212;
-    margin: 0;
+    background-color: white !important;
+    font-family: 'Roboto', 'sans-serif' !important;
+    text-align: center !important;
+    color: #121212 !important;
+    margin: 0 !important;
 }
 
 
 .main {
-    max-width: 1600px;
-    margin: auto;
-    float: none;
-    width: 95%;
-    min-height: 100%;
+    max-width: 1600px !important;
+    margin: auto !important;
+    float: none !important;
+    width: 95% !important;
+    min-height: 100% !important;
 }
 
 .logos {
-    margin: auto;
-    display: block;
-    max-width: 70%;
-    max-height: 15rem;
+    margin: auto !important;
+    display: block !important;
+    max-width: 70% !important;
+    max-height: 15rem !important;
 }
 
 .outerboxleft {
-    background-image: linear-gradient(45deg, rgba(64, 209, 255, 1) 0%, #00ffae 100%);
-    border-radius: 4px;
-    width: 45%;
-    max-width: 640px;
-    display: inline-block;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    background-image: linear-gradient(45deg, rgba(64, 209, 255, 1) 0%, #00ffae 100%) !important;
+    border-radius: 4px !important;
+    max-width: 640px !important;
+    display: inline-block !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important;
 }
 
 .innerboxleft {
-    border-radius: 4px;
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-    margin-bottom: 7%;
-    margin-top: -7%;
-    margin-left: -7%;
-    display: inline-block;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    border-radius: 4px !important;
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: middle !important;
+    margin-bottom: 7% !important;
+    margin-top: -7% !important;
+    margin-left: -7% !important;
+    display: inline-block !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important;
 }
 
 .textarearight {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    text-align: left !important;
 }
 
 .outerboxright {
-    background-image: linear-gradient(135deg, rgb(169, 64, 255) 0%, #0084ff 100%);
-    border-radius: 4px;
-    max-width: 640px;
-    display: inline-block;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    background-image: linear-gradient(135deg, rgb(169, 64, 255) 0%, #0084ff 100%) !important;
+    border-radius: 4px !important;
+    max-width: 640px !important;
+    display: inline-block !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important;
 }
 
 .aspect-ratio {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 51%;
+    position: relative !important;
+    width: 100% !important;
+    height: 0 !important;
+    padding-bottom: 51% !important;
 }
 
 .innerboxright {
-    border-radius: 4px;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-top: -7%;
-    margin-bottom: 7%;
-    margin-left: 3.5%;
-    display: inline-block;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    border-radius: 4px !important;
+    width: 100% !important;
+    height: 100% !important;
+    vertical-align: middle !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin-top: -7% !important;
+    margin-bottom: 7% !important;
+    margin-left: 3.5% !important;
+    display: inline-block !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important;
 }
 
 .textarealeft {
-    vertical-align: middle;
-    text-align: right;
+    vertical-align: middle !important;
+    text-align: right !important;
 }
 
 .cssanimation,
 .cssanimation span {
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    animation-duration: 1s !important;
+    animation-fill-mode: both !important;
 }
 
 
 .fadeInBottom {
-    animation-name: fadeInBottom
+    animation-name: fadeInBottom !important;
 }
 
 @keyframes fadeInBottom {
     from {
-        opacity: 0;
-        transform: translateY(100%);
+        opacity: 0 !important;
+        transform: translateY(100%) !important;
     }
     to {
-        opacity: 1
+        opacity: 1 !important;
     }
 }
 
 mark {
-    background-color: #121212;
-    padding: 3px;
-    color: white;
+    background-color: #121212 !important;
+    padding: 3px !important;
+    color: white !important;
 }
 
 .marki {
-    background-color: rgba(0, 0, 0, 0);
-    background-size: 100% 100%;
-    background-position: 0% 0%;
-    padding-left: 3px;
-    padding-right: 3px;
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-size: 100% 100% !important;
+    background-position: 0% 0% !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
 }
 
 .scaleimg {
-    transition: all 0.5s ease;
-    z-index: 99999999999;
+    transition: all 0.5s ease !important;
+    z-index: 99999999999 !important;
 }
 
 .scaleimg:hover {
-    -webkit-transform: rotate(3deg) scale(1.2);
-    transform: rotate(3deg) scale(1.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    -webkit-transform: rotate(3deg) scale(1.2) !important;
+    transform: rotate(3deg) scale(1.2) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1) !important;
 }
 
 .scaleimgl {
-    transition: all 0.5s ease;
+    transition: all 0.5s ease !important;
 }
 
 .scaleimgl:hover {
-    -webkit-transform: rotate(-3deg) scale(1.2);
-    transform: rotate(-3deg) scale(1.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    -webkit-transform: rotate(-3deg) scale(1.2) !important;
+    transform: rotate(-3deg) scale(1.2) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1) !important;
 }
 
 .box {
-    width: 100%;
-    max-width: 100%;
-    display: inline-block;
-    margin-bottom: 50px;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: inline-block !important;
+    margin-bottom: 50px !important;
 }
 
 .head {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center !important;
+    flex-direction: column !important;
     background-image: url(../img/background.webp);
-    background-size: cover;
-    background-position: 50% 65%;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 100%;
-    min-height: 350px;
-    margin: auto;
+    background-size: cover !important;
+    background-position: 50% 65% !important;
+    color: white !important;
+    text-align: center !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    width: 100% !important;
+    min-height: 350px !important;
+    margin: auto !important;
 }
 
 .homepagebutton {
-    color: #121212;
-    background: #FFF;
-    padding: 10px 10px;
-    min-width: 15rem;
-    height: 50px;
-    border: 3px solid #121212;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #242424;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s;
+    color: #121212 !important;
+    background: #FFF !important;
+    padding: 10px 10px !important;
+    min-width: 15rem !important;
+    height: 50px !important;
+    border: 3px solid #121212 !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    box-shadow: inset 0 0 0 0 #242424 !important;
+    -webkit-transition: all ease 0.5s !important;
+    -moz-transition: all ease 0.5s !important;
+    transition: all ease 0.5s !important;
 }
 
 .homepagebutton:hover {
-    border: 3px solid #121212;
-    color: #fff;
-    background-color: #121212;
-    font-size: 20px;
-    font-weight: bold;
+    border: 3px solid #121212 !important;
+    color: #fff !important;
+    background-color: #121212 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
 }
 
 .copyright {
-    background-color: #121212;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    color: white;
+    background-color: #121212 !important;
+    width: 100% !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: white !important;
 }
 
 .socials {
-    color: white;
-    font-size: 36px;
-    display: inline-block;
-    margin: 5px;
+    color: white !important;
+    font-size: 36px !important;
+    display: inline-block !important;
+    margin: 5px !important;
 }
 
 .scaletext * {
-    color: white;
-    transition: all ease .5s;
+    color: white !important;
+    transition: all ease .5s !important;
 }
 
 .scaletext *:hover {
-    background-image: linear-gradient(90deg, rgb(169, 64, 255), #0084ff);
-    transition: all ease .5s;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, rgb(169, 64, 255), #0084ff) !important;
+    transition: all ease .5s !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 
 .copyright * {
-    color: white;
+    color: white !important;
 }
 
 
 .headimg {
-    width: 32px;
+    width: 32px !important;
 }
 
 .navbar li a:hover {
-    background-color: #242424;
+    background-color: #242424 !important;
 }
 
 a:link {
-    color: #121212;
+    color: #121212 !important;
 }
 
 a:visited {
-    color: #323232
+    color: #323232 !important;
 }
 @media (max-width: 600px) {
     .logos {
-        max-width: 80%;
+        max-width: 80% !important;
     }
     .textarearight, .textarealeft{
-        text-align: revert;
+        text-align: revert !important;
     }
     .discordboxiframe {
-        order: 1;
+        order: 1 !important;
     }
     .discordtext {
-        order:2;
+        order: 2 !important;
     }
 }
 
 .s3-cardtop {
-    height: 150px;
-    width: 100%;
-    color: white;
-    font-size: 72px;
-    background-image: linear-gradient(90deg, rgb(169, 64, 255) 0%, #0084ff 100%);
+    height: 150px !important;
+    width: 100% !important;
+    color: white !important;
+    font-size: 72px !important;
+    background-image: linear-gradient(90deg, rgb(169, 64, 255) 0%, #0084ff 100%) !important;
 }
 .s3-cardtop-icon {
-    vertical-align: middle;
-    height:100%;
+    vertical-align: middle !important;
+    height:100% !important;
 }
 @keyframes fadeIn {
     0% {
-      opacity: 0;
+      opacity: 0 !important;
     }
     100% {
-      opacity: 1;
+      opacity: 1 !important;
     }
 }
   
 .carouselSlideIn {
-    opacity: 1;
-    animation: fadeIn 0.5s linear;
+    opacity: 1 !important;
+    animation: fadeIn 0.5s linear !important;
 }
 @keyframes fadeOut {
     0% {
-      opacity: 1;
+      opacity: 1 !important;
     }
     100% {
-      opacity: 0;
+      opacity: 0 !important;
     }
 }
   
 .carouselSlideOut {
-    opacity: 1;
-    animation: fadeOut 0.5s linear;
+    opacity: 1 !important;
+    animation: fadeOut 0.5s linear !important;
 }
 .item-enter {
-    opacity: 0;
+    opacity: 0 !important;
   }
   .item-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
+    opacity: 1 !important;
+    transition: opacity 500ms ease-in !important;
   }
   .item-exit {
-    opacity: 1;
+    opacity: 1 !important;
   }
   .item-exit-active {
-    opacity: 0;
-    transition: opacity 500ms ease-in;
+    opacity: 0 !important;
+    transition: opacity 500ms ease-in !important;
   }

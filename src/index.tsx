@@ -1,3 +1,4 @@
+import "./Styles/alex.scss";
 import "normalize.css"; // Import normalize.css (a css reset)
 import "./Styles/styles.scss";
 import "firebase/database"; // Import Firebase Database component
@@ -38,6 +39,7 @@ const SeasonThree = React.lazy(() => import("./Pages/Season3"));
 const MinigamesPage = React.lazy(() => import("./Pages/Minigames"));
 const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
 const AboutPage = React.lazy(() => import("./Pages/About"));
+const PartnerPage = React.lazy(() => import("./Pages/Partners"));
 // End Page Imports
 
 // set default theme
@@ -317,7 +319,7 @@ function MainApp(): JSX.Element {
                             </ListItem>
                         </List>
                     </Collapse>
-                    <ListItem button component={Link} to="/classic" onClick={handleDrawerClose}>
+                    <ListItem button component={Link} to="/partners" onClick={handleDrawerClose}>
                         <ListItemIcon><GroupIcon /></ListItemIcon>
                         <ListItemText primary="Partners" />
                     </ListItem>
@@ -340,6 +342,9 @@ function MainApp(): JSX.Element {
                         </Route>
                         <Route path="/minigames">
                             <MinigamesPage />
+                        </Route>
+                        <Route path="/partners">
+                            <PartnerPage />
                         </Route>
                         <Route path="/rick">
                             {() => { rickRoll(); }}

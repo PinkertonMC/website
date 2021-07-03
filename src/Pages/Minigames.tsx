@@ -1,5 +1,3 @@
-import "../Styles/alex.scss";
-
 import { Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
 import BuildIcon from "@material-ui/icons/Build";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
@@ -16,7 +14,7 @@ export default function MinigamesPages(): JSX.Element {
     return (
         <div className="text-center s3-body">
             <Card color="primary" style={{ marginBottom: "2rem" }} className="head">
-                <img src="/assets/images/pinkertons3website.png" className="logos" alt="Pinkerton Season 3 logo" />
+                <img src="/assets/images/pinkertonminigames.png" className="logos" alt="Pinkerton Minigames logo" />
                 <h1 className="s3-heading">
                     <div className="marki markianimation">Minigames, the Pinkerton way.</div>
                 </h1>

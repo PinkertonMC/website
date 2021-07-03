@@ -50,11 +50,15 @@ export default function AboutPage(): JSX.Element {
                     />
                 </div>
             </Card>
+            <h1 className="text-center s3-body" style={{ margin: "revert" }}>Co-Owners</h1>
             <Grid container justify="center" spacing={2}>
-                <AboutStaffVertical uname="AlexTheSavage07" quote="Graphic Designer & Developer" uuid="3142a128-d6e7-40f2-97e0-417e3d6bbff0" github="asavage7" youtube="UCbEnlral5D80rJr8k8xrHuQ" discord="asavage7#3718" twitter="alexthesavage07" twitch="g3mlive" reddit="AlexTheSavage07" />
+                <AboutStaffVertical uname="AlexTheSavage07" quote="Graphic Designer & Developer" uuid="3142a128-d6e7-40f2-97e0-417e3d6bbff0" github="asavage7" youtube="UCbEnlral5D80rJr8k8xrHuQ" discord="Asavage7#3718" twitter="alexthesavage07" twitch="g3mlive" reddit="AlexTheSavage07" />
                 <AboutStaffVertical uname="isteiger11" quote="Main Developer & Sorta Graphic Designer" uuid="f0b3fa4b-e16d-433c-a3df-18b73999a8ee" github="isteiger" youtube="UCX8m1Mtl75RQp3qlRxK1FXg" discord="isteiger11#7458" twitch="isteiger11" />
                 <AboutStaffVertical uname="Redpug111" quote="Backend Developer" uuid="3dd3bc81-b5e5-4714-90cd-ae2b72a129cc" github="Redpug111" discord="Redpug111#1111" twitter="Redpug111" twitch="Redpug111" />
-                <AboutStaffVertical uname="Rising_Phoenix" quote="Server Administrator" uuid="ed6319cd-3c3a-4628-88cb-c20d21eb7ea9" github="RisingPhoenix-24" discord="Rising_Phoenix#0024" />
+            </Grid>
+            <h1 className="text-center s3-body" style={{ margin: "revert" }}>Moderators</h1>
+            <Grid container justify="center" spacing={2}>
+                <AboutStaffVertical uname="Rising_Phoenix" quote="Head Moderator" uuid="ed6319cd-3c3a-4628-88cb-c20d21eb7ea9" github="RisingPhoenix-24" discord="Rising_Phoenix#0024" />
             </Grid>
 
         </>

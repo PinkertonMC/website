@@ -20,6 +20,9 @@
         <loc>https://www.pinkertonmc.com/about</loc>
         <changefreq>weekly</changefreq>
     </url>
-
+    <url>
+        <loc>https://www.pinkertonmc.com/partners</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 
 </urlset>

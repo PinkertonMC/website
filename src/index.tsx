@@ -308,13 +308,13 @@ function MainApp(): JSX.Element {
                                 <ListItemIcon><Looks3Icon /></ListItemIcon>
                                 <ListItemText primary="Season 3" />
                             </ListItem>
-                            <ListItem button component={Link} to="/minigames" onClick={handleDrawerClose}>
-                                <ListItemIcon><VideogameAssetIcon /></ListItemIcon>
-                                <ListItemText primary="Minigames" />
-                            </ListItem>
                             <ListItem button component={Link} to="/classic" onClick={handleDrawerClose}>
                                 <ListItemIcon><LooksTwoIcon /></ListItemIcon>
                                 <ListItemText primary="Classic" />
+                            </ListItem>
+                            <ListItem button component={Link} to="/minigames" onClick={handleDrawerClose}>
+                                <ListItemIcon><VideogameAssetIcon /></ListItemIcon>
+                                <ListItemText primary="Minigames" />
                             </ListItem>
                         </List>
                     </Collapse>

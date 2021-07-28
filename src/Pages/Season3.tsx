@@ -88,7 +88,7 @@ export default function SeasonThreePage(): JSX.Element {
                             <StepLabel>Get the Server Address from the homepage & join.</StepLabel>
                         </Step>
                         <Step>
-                            <StepLabel>Go through the S3 Portal in the lobby or type <code>/server seasonthree</code>.</StepLabel>
+                            <StepLabel>Go through the S3 Portal in the lobby or type <code>/s3</code>.</StepLabel>
                         </Step>
                         <Step>
                             <StepLabel>Profit.</StepLabel>

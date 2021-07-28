@@ -89,7 +89,7 @@ export default function ClassicPage(): JSX.Element {
                             <StepLabel>Get the Server Address from the homepage & join.</StepLabel>
                         </Step>
                         <Step>
-                            <StepLabel>Go through the Classic Portal in the lobby or type <code>/server classic</code>.</StepLabel>
+                            <StepLabel>Go through the Classic Portal in the lobby or type <code>/classic</code>.</StepLabel>
                         </Step>
                         <Step>
                             <StepLabel>Profit.</StepLabel>

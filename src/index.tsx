@@ -3,7 +3,8 @@ import "./Styles/styles.scss";
 import "firebase/database"; // Import Firebase Database component
 import "firebase/auth"; // Import Firebase Authentication component to do what it says
 
-import { AppBar, Avatar, Button, Collapse, createMuiTheme, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip } from "@material-ui/core"; // Import our Material-UI Components
+import { AppBar, Avatar, Button, Collapse, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, ListSubheader, TextField, ThemeProvider, Toolbar, Tooltip } from "@material-ui/core"; // Import our Material-UI Components
+import { createTheme } from "@material-ui/core/styles"
 import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle"; // Import account icon, for when user is not logged in for the drawer
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"; // Import Chevron Icon
@@ -42,7 +43,7 @@ const PartnerPage = React.lazy(() => import("./Pages/Partners"));
 // End Page Imports
 
 // set default theme
-const defaultTheme = createMuiTheme({ // Set default styles, will probably be overridden
+const defaultTheme = createTheme({ // Set default styles, will probably be overridden
     palette: {
         type: "light",
         primary: {

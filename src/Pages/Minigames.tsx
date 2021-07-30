@@ -34,7 +34,7 @@ export default function MinigamesPages(): JSX.Element {
 
                 <div className="box cssanimation fadeInBottom">
                     <h1>Other Features</h1>
-                    <Grid container justify="center" spacing={2}>
+                    <Grid container justifyContent="center" spacing={2}>
                         <Grid item>
                             <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }}>
                                 <CardMedia className="s3-cardtop">

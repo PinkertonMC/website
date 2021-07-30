@@ -22,7 +22,12 @@ export default function Carousel(props: { children: JSX.Element[] }): JSX.Elemen
     }
     let timeout = setTimeout(() => {
         doNextSlide();
-    }, 5000)
+    }, 5000);
+    React.useEffect(() => {
+        return function cleanup() {
+            clearTimeout(timeout);
+        }
+    });
     return (
         <div style={{ marginBottom: "2rem", position: "relative" }}>
             {props.children[ind]}

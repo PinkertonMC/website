@@ -41,6 +41,7 @@ const MinigamesPage = React.lazy(() => import("./Pages/Minigames"));
 const NotFoundPage = React.lazy(() => import("./Pages/NotFound"));
 const AboutPage = React.lazy(() => import("./Pages/About"));
 const PartnerPage = React.lazy(() => import("./Pages/Partners"));
+const EarthPage = React.lazy(() => import("./Pages/Earth"));
 // End Page Imports
 
 // set default theme
@@ -306,6 +307,10 @@ function MainApp(): JSX.Element {
                     </ListItem>
                     <Collapse in={serversOpen} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding className={globalStyles.nested}>
+                            <ListItem button component={Link} to="/earth" onClick={handleDrawerClose}>
+                                <ListItemIcon><Looks3Icon /></ListItemIcon>
+                                <ListItemText primary="Earth" />
+                            </ListItem>
                             <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>
                                 <ListItemIcon><Looks3Icon /></ListItemIcon>
                                 <ListItemText primary="Season 3" />
@@ -341,6 +346,9 @@ function MainApp(): JSX.Element {
                         </Route>
                         <Route path="/season3">
                             <SeasonThree />
+                        </Route>
+                        <Route path="/earth">
+                            <EarthPage />
                         </Route>
                         <Route path="/classic">
                             <ClassicPage />

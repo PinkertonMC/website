@@ -14,6 +14,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import GroupIcon from "@material-ui/icons/Group";
 import HomeIcon from "@material-ui/icons/Home"; // Import Home Icon
+import InfoIcon from "@material-ui/icons/Info";
 import LinkIcon from "@material-ui/icons/Link";
 import LinkOffIcon from "@material-ui/icons/LinkOff";
 import Looks3Icon from "@material-ui/icons/Looks3"; // Import 3 icon
@@ -322,6 +323,10 @@ function MainApp(): JSX.Element {
                     <ListItem button component={Link} to="/partners" onClick={handleDrawerClose}>
                         <ListItemIcon><GroupIcon /></ListItemIcon>
                         <ListItemText primary="Partners" />
+                    </ListItem>
+                    <ListItem button component={Link} to="/about" onClick={handleDrawerClose}>
+                        <ListItemIcon><InfoIcon /></ListItemIcon>
+                        <ListItemText primary="About Us" />
                     </ListItem>
                 </List>
             </Drawer>

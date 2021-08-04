@@ -1,6 +1,7 @@
 {
   "short_name": "PinkertonMC",
   "name": "The Pinkerton Minecraft Server Network",
+  "description": "The Pinkerton Minecraft Server Network (PinkertonMC) is a Minecraft server network that aims to be different by listening to you, the player.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#003E81",
+  "theme_color": "#003e81",
   "background_color": "#ffffff"
 }

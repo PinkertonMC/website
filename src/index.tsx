@@ -20,6 +20,7 @@ import LinkOffIcon from "@material-ui/icons/LinkOff";
 import Looks3Icon from "@material-ui/icons/Looks3"; // Import 3 icon
 import LooksTwoIcon from "@material-ui/icons/LooksTwo"; // Import 3 icon
 import MenuIcon from "@material-ui/icons/Menu"; // Import Menu Icon
+import PublicIcon from "@material-ui/icons/Public"; // Icon for Earth
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset"; // Import Game Icon
 import clsx from "clsx"; // Import conditional React class helper
 import firebase from "firebase/app"; // Import Firebase core
@@ -308,7 +309,7 @@ function MainApp(): JSX.Element {
                     <Collapse in={serversOpen} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding className={globalStyles.nested}>
                             <ListItem button component={Link} to="/earth" onClick={handleDrawerClose}>
-                                <ListItemIcon><Looks3Icon /></ListItemIcon>
+                                <ListItemIcon><PublicIcon /></ListItemIcon>
                                 <ListItemText primary="Earth" />
                             </ListItem>
                             <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>

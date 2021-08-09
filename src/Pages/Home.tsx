@@ -17,7 +17,7 @@ export default function HomePage(): JSX.Element {
     return (
         <div className="text-center s3-body">
             <Carousel>
-                <Card color="primary" style={{ height: "" }}>
+                <Card color="primary">
                     <CardActionArea onClick={() => { window.open("https://www.youtube.com/watch?v=WCGVITgsYwQ", "_blank") }} className="head">
                         <img src="/assets/images/home/pinkertonrevival.svg" className="logos" alt="Pinkerton: The Revival" />
                         <h1 className="s3-heading" style={{ marginBottom: 0 }}>

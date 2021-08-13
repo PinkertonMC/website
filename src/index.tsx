@@ -20,6 +20,7 @@ import LinkOffIcon from "@material-ui/icons/LinkOff";
 import Looks3Icon from "@material-ui/icons/Looks3"; // Import 3 icon
 import LooksTwoIcon from "@material-ui/icons/LooksTwo"; // Import 3 icon
 import MenuIcon from "@material-ui/icons/Menu"; // Import Menu Icon
+import PublicIcon from "@material-ui/icons/Public"; // Icon for Earth
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset"; // Import Game Icon
 import clsx from "clsx"; // Import conditional React class helper
 import firebase from "firebase/app"; // Import Firebase core
@@ -34,7 +35,8 @@ import copy from "./Snippets/Copy";
 import useStyles from "./Styles/styles"; // Import our styles
 import SuspenseLoader from "./Util/SuspenseLoader";
 // Page Imports
-const HomePage = React.lazy(() => import("./Pages/Home"));
+// const HomePage = React.lazy(() => import("./Pages/Home"));
+const HomeEarthPage = React.lazy(() => import("./Pages/HomeEarth"));
 const ClassicPage = React.lazy(() => import("./Pages/Classic"));
 const SeasonThree = React.lazy(() => import("./Pages/Season3"));
 const MinigamesPage = React.lazy(() => import("./Pages/Minigames"));
@@ -247,6 +249,9 @@ function MainApp(): JSX.Element {
     function rickRoll(): void {
         window.location.replace("https://www.youtube.com/watch?v=oHg5SJYRHA0");
     }
+    function earthDynmap(): void {
+        window.location.replace("http://dynmap.earth.pinkertonmc.com");
+    }
     const handleAuthDialogOpen: () => void = () => { // Function for when the authentication dialog is opened
         authSetOpen(true); // Set authentication dialog to opened
     };
@@ -306,6 +311,10 @@ function MainApp(): JSX.Element {
                     </ListItem>
                     <Collapse in={serversOpen} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding className={globalStyles.nested}>
+                            <ListItem button component={Link} to="/earth" onClick={handleDrawerClose}>
+                                <ListItemIcon><PublicIcon /></ListItemIcon>
+                                <ListItemText primary="Earth" />
+                            </ListItem>
                             <ListItem button component={Link} to="/season3" onClick={handleDrawerClose}>
                                 <ListItemIcon><Looks3Icon /></ListItemIcon>
                                 <ListItemText primary="Season 3" />
@@ -336,29 +345,47 @@ function MainApp(): JSX.Element {
                 <Suspense fallback={<SuspenseLoader />}>
                     <RouterSwitch>
                         {/* Start game URLS */}
+                        <Route path="/earth/dynmap">
+                            {() => { earthDynmap(); }}
+                        </Route>
                         <Route path="/about">
-                            <AboutPage />
+                            <div style={{ padding: "24px" }}>
+                                <AboutPage />
+                            </div>
                         </Route>
                         <Route path="/season3">
-                            <SeasonThree />
+                            <div style={{ padding: "24px" }}>
+                                <SeasonThree />
+                            </div>
+                        </Route>
+                        <Route path="/earth">
+                            <HomeEarthPage />
                         </Route>
                         <Route path="/classic">
-                            <ClassicPage />
+                            <div style={{ padding: "24px" }}>
+                                <ClassicPage />
+                            </div>
                         </Route>
                         <Route path="/minigames">
-                            <MinigamesPage />
+                            <div style={{ padding: "24px" }}>
+                                <MinigamesPage />
+                            </div>
                         </Route>
                         <Route path="/partners">
-                            <PartnerPage />
+                            <div style={{ padding: "24px" }}>
+                                <PartnerPage />
+                            </div>
                         </Route>
                         <Route path="/rick">
                             {() => { rickRoll(); }}
                         </Route>
                         <Route path="/" exact>
-                            <HomePage />
+                            <HomeEarthPage />
                         </Route>
                         <Route>
-                            <NotFoundPage />
+                            <div style={{ padding: "24px" }}>
+                                <NotFoundPage />
+                            </div>
                         </Route>
                     </RouterSwitch>
                 </Suspense>

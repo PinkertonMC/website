@@ -185,7 +185,7 @@ mark {
 }
 
 a:link {
-    color: #121212 !important;
+    color: #121212;
 }
 
 a:visited {
@@ -245,8 +245,8 @@ a:visited {
 }
 .item-enter {
     opacity: 0 !important;
-  }
-  .item-enter-active {
+}
+.item-enter-active {
     opacity: 1 !important;
     transition: opacity 500ms ease-in !important;
   }
@@ -257,3 +257,271 @@ a:visited {
     opacity: 0 !important;
     transition: opacity 500ms ease-in !important;
   }
+  html {
+    scroll-behavior: smooth;
+}
+
+/* Earth Page Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+.earth-body {
+    background: #080808;
+    color: white !important;
+    font-family: "Roboto", "sans-serif";
+}
+
+.earth-header {
+    background-image: url("../img/Stars_1K.webp");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    animation: slide 40s linear infinite;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 5px;
+}
+
+.earth-headertext {
+    text-align: center;
+    padding: 10px;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.earth-headertext h1 {
+    font-size: 6vh;
+}
+
+.earth-headertext p, i {
+    font-size: 3vh;
+}
+
+.earth-br {
+    flex-basis: 100%;
+    height: 0;
+    margin-bottom: 15px;
+}
+
+.earth-hr {
+    flex-basis: 100%;
+    height: 2px;
+    background-color: #242424;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.earth-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-radius: 15px;
+}
+
+.earth-flex img {
+    border-radius: 15px;
+}
+
+.earth-flex1 {
+    width: 33%;
+    text-align: top;
+}
+
+.earth-flex2 {
+    width: 62%;
+    margin: 2%;
+}
+
+.earth-flex3 {
+    width: 100%;
+    text-align: center;
+}
+
+.earth-flex2right {
+    width: 62%;
+    margin: 2%;
+    text-align: right;
+}
+
+.earth-card {
+    border-radius: 15px;
+    width: 31.33333%;
+    margin: 1%;
+    text-align: center;
+    background-color: #121212;
+}
+
+.earth-card p {
+    padding: 20px;
+}
+
+.earth-cardhead {
+    background: linear-gradient(75deg, rgba(207, 66, 237, 1) 0%, rgba(0, 131, 251, 1) 100%);
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.earth-textleft {
+    text-align: left;
+}
+
+.earth-roundbtn {
+    opacity: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #363636;
+    color: white;
+    cursor: pointer;
+    border-radius: 32px;
+    border: none;
+    width: 64px;
+    height: 64px;
+    transition: all 0.5s;
+}
+
+.earth-roundbtn:hover {
+    background-color: #484848;
+}
+
+.earth-join {
+    margin-top: 50px;
+    padding-bottom: 70px;
+}
+
+.earth-slideimg {
+    height: 300vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.earth-socials {
+    font-size: 18px;
+    background-color: #484848;
+    color: #121212;
+    cursor: pointer;
+    border-radius: 32px;
+    border: none;
+    width: 48px;
+    height: 48px;
+    transition: all 0.5s;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.earth-socials:hover {
+    background-color: white;
+}
+
+.earth-btn {
+    background-color: white;
+    border: none;
+    color: black;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    font-family: "Roboto", "sans-serif";
+    font-size: large;
+    cursor: pointer;
+}
+
+.earth-btn a {
+    color: black;
+    font-family: "Roboto", "sans-serif";
+    font-size: large;
+    font-weight: bold;
+}
+
+.earth-btn:before, .earth-btn:after {
+    border: 0 solid transparent;
+    transition: all 1s;
+    content: '';
+    height: 0;
+    border-radius: 4px;
+    position: absolute;
+    width: 20%;
+}
+
+.earth-btn:before {
+    border-top: .5vh solid white;
+    right: 0;
+    top: -1vh;
+}
+
+.earth-btn:after {
+    border-bottom: .5vh solid white;
+    bottom: -1vh;
+    left: 0;
+}
+
+.earth-btn:hover:before, .earth-btn:hover:after {
+    width: 80%;
+}
+
+/*canvas {
+    margin: 15px;
+    position: sticky;
+    height: auto;
+    margin: auto;
+    display: inline;
+    max-height: 100vh;
+}*/
+
+.earth-a {
+    color: white !important;
+    text-decoration: none;
+}
+.earth-a:link {
+    color: white !important;
+    text-decoration: none;
+}
+.earth-a:visited {
+    color: white !important;
+    text-decoration: none;
+}
+
+.earth-floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+@keyframes slide {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1920px 0;
+    }
+}

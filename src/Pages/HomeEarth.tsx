@@ -7,7 +7,7 @@ import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
 import React from "react";
 
 export default function HomePageEarth(): JSX.Element {
-    document.title = "PinkertonMC";
+    document.title = "Earth | PinkertonMC";
     React.useEffect(() => {
         //Get the button
         const mybutton = document.getElementById("roundbtn")!;

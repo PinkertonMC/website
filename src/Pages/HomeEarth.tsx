@@ -172,6 +172,11 @@ export default function HomePageEarth(): JSX.Element {
                 </div>
             </div>
             <br /><br /><br /><br />
+            <div className="earth-flex">
+                <div className="earth-flex3">
+                    <h1>Other Features:</h1>
+                </div>
+            </div>
             <Grid container justifyContent="center" spacing={2}>
                 <Grid item>
                     <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }} className="earth-card">
@@ -222,7 +227,12 @@ export default function HomePageEarth(): JSX.Element {
                     </Card>
                 </Grid>
             </Grid>
+            <div id="join" className="earth-flex earth-join">
+                <h1 className="earth-flex3">So, what are you waiting for?</h1><a className="earth-flex3 earth-a" href="https://beta.pinkertonmc.com">
+                    <Button className="earth-btn" variant="contained" size="large">Beta Test Today</Button>
+                </a>
+            </div>
             <a href="#top"><button className="earth-roundbtn" id="roundbtn"><ArrowDropUpRoundedIcon style={{ fontSize: "3vh" }} /></button></a>
-        </div>
+        </div >
     );
 }

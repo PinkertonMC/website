@@ -54,6 +54,7 @@ export default function HomePageEarth(): JSX.Element {
             canvas.height = 1080;
             canvas.style.position = "sticky";
             canvas.style.top = "0";
+            canvas.style.width = "100%";
             img.onload = function () {
                 context?.drawImage(img, 0, 0);
             }
@@ -95,7 +96,7 @@ export default function HomePageEarth(): JSX.Element {
             <div className="earth-header">
                 <div className="earth-headertext">
                     <div>
-                        <img src="/assets/images/earth/logo.png" height="200px" alt="pinkerton earth logo" />
+                        <img src="/assets/images/earth/logo.png" style={{ maxWidth: "100%" }} alt="pinkerton earth logo" />
                         <h1 id="bump">AN EXPERIENCE ON A GLOBAL LEVEL.</h1>
                         <a href="#join" className="earth-a"><Button className="earth-btn" variant="contained" size="large">APPLY FOR BETA TESTING</Button></a><br /><br /><br /><br />
                     </div>

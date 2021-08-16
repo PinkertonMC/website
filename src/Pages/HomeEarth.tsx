@@ -1,4 +1,5 @@
 import { Button } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Grid, Step, StepLabel, Stepper, Typography } from "@material-ui/core";
 import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import ArrowDropUpRoundedIcon from "@material-ui/icons/ArrowDropUpRounded";
 import BugReportRoundedIcon from "@material-ui/icons/BugReportRounded";
@@ -171,40 +172,56 @@ export default function HomePageEarth(): JSX.Element {
                 </div>
             </div>
             <br /><br /><br /><br />
-            <div className="earth-flex">
-                <div className="earth-flex3">
-                    <h1>Other Features:</h1>
-                </div>
-                <div className="earth-card">
-                    <div className="earth-cardhead">
-                        <FlashOnRoundedIcon fontSize="inherit" />
-                    </div>
-                    <h2>Fast Hosting</h2>
-                    <p>We've optimized and improved our hosting to keep the server fast and steady. We've also reduced the
-                        resources the server takes to run, to keep it smooth.</p>
-                </div>
-                <div className="earth-card">
-                    <div className="earth-cardhead">
-                        <BugReportRoundedIcon fontSize="inherit" />
-                    </div>
-                    <h2>Less Bugs</h2>
-                    <p>Bugs aren't features, so we've worked to squash as many of them as possible even before beta starts, so
-                        you can have the smoothest experience possible, even when testing.</p>
-                </div>
-                <div className="earth-card">
-                    <div className="earth-cardhead">
-                        <EventAvailableRoundedIcon fontSize="inherit" />
-                    </div>
-                    <h2>Timed Rewards</h2>
-                    <p>Minecraft servers aren't fun unless there's things to come back to, so we've added daily and weekly
-                        events to the server. These include random loot drops, daily cash, and more.</p>
-                </div>
-            </div>
-            <div id="join" className="earth-flex earth-join">
-                <h1 className="earth-flex3">So, what are you waiting for?</h1><a className="earth-flex3 earth-a" href="https://beta.pinkertonmc.com">
-                    <Button className="earth-btn" variant="contained" size="large">Beta Test Today</Button>
-                </a>
-            </div>
+            <Grid container justifyContent="center" spacing={2}>
+                <Grid item>
+                    <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }} className="earth-card">
+                        <CardMedia className="s3-cardtop">
+                            <FlashOnRoundedIcon fontSize="inherit" className="s3-cardtop-icon" />
+                        </CardMedia>
+                        <CardContent style={{ flexGrow: 1 }}>
+                            <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                Fast Hosting
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                We've optimized and improved our hosting to keep the server fast and steady. We've also reduced the
+                                resources the server takes to run, to keep it smooth.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item>
+                    <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }} className="earth-card">
+                        <CardMedia className="s3-cardtop">
+                            <BugReportRoundedIcon fontSize="inherit" className="s3-cardtop-icon" />
+                        </CardMedia>
+                        <CardContent style={{ flexGrow: 1 }}>
+                            <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                Less Bugs
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                Bugs aren't features, so we've worked to squash as many of them as possible even before beta starts, so
+                                you can have the smoothest experience possible, even when testing.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item>
+                    <Card raised color="primary" style={{ width: "18rem", height: "100%", display: "flex", flexWrap: "wrap" }} className="earth-card">
+                        <CardMedia className="s3-cardtop">
+                            <EventAvailableRoundedIcon fontSize="inherit" className="s3-cardtop-icon" />
+                        </CardMedia>
+                        <CardContent style={{ flexGrow: 1 }}>
+                            <Typography component="h5" variant="h5" style={{ fontWeight: "bold" }}>
+                                Timed Rewards
+                            </Typography>
+                            <Typography variant="subtitle1">
+                                Minecraft servers aren't fun unless there's things to come back to, so we've added daily and weekly
+                                events to the server. These include random loot drops, daily cash, and more.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
             <a href="#top"><button className="earth-roundbtn" id="roundbtn"><ArrowDropUpRoundedIcon style={{ fontSize: "3vh" }} /></button></a>
         </div>
     );

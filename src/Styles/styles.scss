@@ -276,12 +276,21 @@ html {
     background-image: url("../img/Stars_1K.webp");
     background-position: center;
     background-repeat: repeat;
-    background-size: cover;
+    height: calc(100vh - 56px);
     animation: slide 40s linear infinite;
-    height: 100vh;
     color: white;
     margin: 0;
     padding: 5px;
+}
+@media (min-width: 600px) {
+    .earth-header {
+        height: calc(100vh - 64px);
+    }
+}
+@media (min-width: 0px) and (orientation: landscape) {
+    .earth-header {
+        height: calc(100vh - 48px);
+    }
 }
 
 .earth-headertext {
@@ -438,6 +447,18 @@ html {
     font-family: "Roboto", "sans-serif";
     font-size: large;
     cursor: pointer;
+    color: #121212 !important;
+    background: #FFF !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    -webkit-transition: all ease 0.5s !important;
+    -moz-transition: all ease 0.5s !important;
+    transition: all ease 0.5s !important;
+}
+.earth-btn:hover {
+    color: #fff !important;
+    background-color: #121212 !important;
 }
 
 .earth-btn a {
@@ -458,14 +479,14 @@ html {
 }
 
 .earth-btn:before {
-    border-top: .5vh solid white;
+    border-top: 0.5rem solid white;
     right: 0;
-    top: -1vh;
+    top: -1rem;
 }
 
 .earth-btn:after {
-    border-bottom: .5vh solid white;
-    bottom: -1vh;
+    border-bottom: 0.5rem solid white;
+    bottom: -1rem;
     left: 0;
 }
 
@@ -500,6 +521,7 @@ html {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    margin-bottom: 20px;
 }
 
 @keyframes floating {

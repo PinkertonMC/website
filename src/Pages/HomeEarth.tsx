@@ -5,7 +5,13 @@ import ArrowDropUpRoundedIcon from "@material-ui/icons/ArrowDropUpRounded";
 import BugReportRoundedIcon from "@material-ui/icons/BugReportRounded";
 import EventAvailableRoundedIcon from "@material-ui/icons/EventAvailableRounded";
 import FlashOnRoundedIcon from "@material-ui/icons/FlashOnRounded";
+import MapRoundedIcon from "@material-ui/icons/Map";
+import MenuBookRoundedIcon from "@material-ui/icons/MenuBookRounded";
+import NewReleasesRoundedIcon from "@material-ui/icons/NewReleasesRounded";
 import React from "react";
+
+import ShowOffCardEarthLeft from "../Snippets/ShowOffCardsEarth/ShowOffCardEarthLeft";
+import ShowOffCardEarthRight from "../Snippets/ShowOffCardsEarth/ShowOffCardEarthRight";
 
 export default function HomePageEarth(): JSX.Element {
     document.title = "Earth | PinkertonMC";
@@ -96,17 +102,15 @@ export default function HomePageEarth(): JSX.Element {
             <div id="top"></div>
             <div className="earth-header">
                 <div className="earth-headertext">
-                    <div>
+                    <div style={{ width: "100%" }}>
                         <img src="/assets/images/earth/logo.png" style={{ maxWidth: "100%" }} alt="pinkerton earth logo" />
                         <h1 id="bump">AN EXPERIENCE ON A GLOBAL LEVEL.</h1>
-                        <a href="#join" className="earth-a"><Button className="earth-btn" variant="contained" size="large">APPLY FOR BETA TESTING</Button></a><br /><br /><br /><br />
+                        <a href="#join" className="earth-a"><Button className="earth-btn" variant="contained" size="large">APPLY FOR BETA TESTING</Button></a>
                     </div>
-                    <div className="earth-br"></div>
                     <a className="earth-floating earth-a" href="#bump">
                         <p>Learn More</p>
                         <ArrowDropDownRoundedIcon style={{ fontSize: "6vh" }} />
                     </a>
-
                 </div>
             </div>
             <div id="globe" className="earth-slideimg">
@@ -116,61 +120,30 @@ export default function HomePageEarth(): JSX.Element {
             <br />
             <br />
             <br />
-            <div className="earth-flex">
-                <div className="earth-br"></div>
-                <div className="earth-flex2" style={{ textAlign: "left" }}>
-                    <h1>Yep. That's Right.</h1>
-                    <p>You can explore the entirety of the real world, at 1:2000 scale. Plus, you can even view it in your
-                        browser. Click the button below to access it.</p><br />
-                    <a className="earth-a" href="http://dynmap.earth.pinkertonmc.com"><Button className="earth-btn" variant="contained" size="large">View Dynamic Map</Button></a>
-                </div>
-                <div className="earth-flex1"><img src="/assets/images/earth/earth-small.webp" width="100%" alt="earth" /><a className="earth-a" href="https://earth.motfe.net">Image from Mattias
-                    Brennecke</a></div>
+            <div className="main">
+                <ShowOffCardEarthRight buttonText="View Dynamic Map" buttonStartIcon={<MapRoundedIcon />} buttonClickLink="http://dynmap.earth.pinkertonmc.com" text="You can explore the entirety of the real world, at 1:2000 scale. Plus, you can even view it in your browser. Click the button below to access it." textHeading="Yep. That's Right." cardContent="/assets/images/earth/earth-small.webp" cardContentDescription="map of earth" attributeText="Image from Mattias Brennecke" attributeLink="https://earth.motfe.net" />
             </div>
             <div id="swords" className="earth-slideimg">
                 <canvas id="factions"></canvas>
             </div>
-            <div className="earth-flex">
-                <div className="earth-br"></div>
-                <div className="earth-flex1"><img src="/assets/images/earth/factions.webp" width="100%" alt="factions" /></div>
-                <div className="earth-flex2right">
-                    <h1>Run a faction your way.</h1>
-                    <p>With SaberFactions, you can run a faction any way you want. Want to be neutral, competitive, or a nomad?
-                        We've got you covered. Plus it integrates nicely into dynmap to plan out journeys and attacks.</p><br />
-                    <a className="earth-a" href="#join"><Button className="earth-btn" variant="contained" size="large">View Faction Guide</Button></a>
-                </div>
+            <div className="main">
+                <ShowOffCardEarthLeft buttonText="View Faction Guide" buttonStartIcon={<MenuBookRoundedIcon />} buttonClickLink="https://feedback.minecraft.net/hc/en-us/articles/4402626897165-Minecraft-Caves-Cliffs-Part-1-1-17-Java-" text="With SaberFactions, you can run a faction any way you want. Want to be neutral, competitive, or a nomad?
+                        We've got you covered. Plus it integrates nicely into dynmap to plan out journeys and attacks." textHeading="Run a faction your way." cardContent="/assets/images/earth/factions.webp" cardContentDescription="new items 1.17" />
             </div>
-            <div className="earth-flex">
-                <div className="earth-br"></div>
-                <div className="earth-flex2" style={{ textAlign: "initial" }}>
-                    <h1>Something for everyone.</h1>
-                    <p>Want to play like it's a classic Pinkerton SMP? Go ahead. Want to raid all competitive factions? Go for
-                        it. Want to just explore the world. We've got you covered, building the server from the ground up for
-                        whatever you want to do.</p><br />
-                    <a className="earth-a" href="#join"><Button className="earth-btn" variant="contained" size="large">View Dynamic Map</Button></a>
-                </div>
-                <div className="earth-flex1"><img src="/assets/images/earth/earth-small.webp" width="100%" alt="earth" /><a className="earth-a" href="https://earth.motfe.net">Image from Mattias
-                    Brennecke</a></div>
+            <div className="main">
+                <ShowOffCardEarthRight buttonText="View Dynamic Map" buttonStartIcon={<MapRoundedIcon />} buttonClickLink="http://dynmap.earth.pinkertonmc.com" text="Want to play like it's a classic Pinkerton SMP? Go ahead. Want to raid all competitive factions? Go for
+                        it. Want to just explore the world? We've got you covered, building the server from the ground up for
+                        whatever you want to do." textHeading="Something for everyone." cardContent="/assets/images/earth/earth-small.webp" cardContentDescription="map of earth" attributeText="Image from Mattias Brennecke" attributeLink="https://earth.motfe.net" />
             </div>
 
             <div id="ver" className="earth-slideimg">
                 <canvas id="version"></canvas>
             </div>
-            <div className="earth-flex">
-                <div className="earth-br"></div>
-                <div className="earth-flex1">
-                    <img src="https://i.redd.it/rso9x5fp5at61.png" width="100%" alt="new items 1.17" />
-                    <a className="earth-a" href="https://www.reddit.com/r/Minecraft/comments/mr8zgw/heres_another_quick_visualization_of_all_the_new/">
-                        Image from u/Doctor_Rainbow
-                    </a>
-                </div>
-                <div className="earth-flex2right">
-                    <h1>All on the Latest Version of Minecraft.</h1>
-                    <p>Every new feature is here, without any compatability layers. Use copper blocks, tame axolotls, and more!
-                        Plus, the map uses vanilla ores and caves, with some quality of life tweaks.</p><br />
-                    <a className="earth-a" href="https://feedback.minecraft.net/hc/en-us/articles/4402626897165-Minecraft-Caves-Cliffs-Part-1-1-17-Java-"><Button className="earth-btn" variant="contained" size="large">View 1.17 Changes</Button></a>
-                </div>
+            <div className="main">
+                <ShowOffCardEarthLeft buttonText="View 1.17 Changes" buttonStartIcon={<NewReleasesRoundedIcon />} buttonClickLink="https://feedback.minecraft.net/hc/en-us/articles/4402626897165-Minecraft-Caves-Cliffs-Part-1-1-17-Java-" text="Every new feature is here, without any compatability layers. Use copper blocks, tame axolotls, and more!
+                        Plus, the map uses vanilla ores and caves, with some quality of life tweaks." textHeading="All on the Latest Version of Minecraft." cardContent="https://i.redd.it/rso9x5fp5at61.png" cardContentDescription="new items 1.17" attributeText="Image from u/Doctor_Rainbow" attributeLink="https://www.reddit.com/r/Minecraft/comments/mr8zgw/heres_another_quick_visualization_of_all_the_new/" />
             </div>
+
             <br /><br /><br /><br />
             <div className="earth-flex">
                 <div className="earth-flex3">

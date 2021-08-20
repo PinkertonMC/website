@@ -3,14 +3,14 @@ import { ClassNameMap } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 
 import useStyles from "../Styles/styles";
-import HomePage from "./Home";
+import HomePageEarth from "./HomeEarth";
 
 export default function NotFoundPage(): JSX.Element {
     const globalStyles: ClassNameMap<string> = useStyles();
     document.title = "404 Not Found | PinkertonMC";
     return (
         <>
-            <HomePage />
+            <HomePageEarth />
             <Dialog
                 open={true}
             >

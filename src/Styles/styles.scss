@@ -249,21 +249,19 @@ a:visited {
 .item-enter-active {
     opacity: 1 !important;
     transition: opacity 500ms ease-in !important;
-  }
-  .item-exit {
+}
+.item-exit {
     opacity: 1 !important;
-  }
-  .item-exit-active {
+}
+.item-exit-active {
     opacity: 0 !important;
     transition: opacity 500ms ease-in !important;
-  }
-  html {
-    scroll-behavior: smooth;
 }
 
 /* Earth Page Styles */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .earth-body {

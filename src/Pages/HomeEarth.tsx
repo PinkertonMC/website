@@ -127,7 +127,7 @@ export default function HomePageEarth(): JSX.Element {
                 <canvas id="factions"></canvas>
             </div>
             <div className="main">
-                <ShowOffCardEarthLeft buttonText="View Faction Guide" buttonStartIcon={<MenuBookRoundedIcon />} buttonClickLink="https://feedback.minecraft.net/hc/en-us/articles/4402626897165-Minecraft-Caves-Cliffs-Part-1-1-17-Java-" text="With SaberFactions, you can run a faction any way you want. Want to be neutral, competitive, or a nomad?
+                <ShowOffCardEarthLeft buttonText="View Faction Guide" buttonStartIcon={<MenuBookRoundedIcon />} buttonClickLink="https://docs.google.com/document/d/e/2PACX-1vTOxds_YgCw7OlqZYyqSCB5lKtPpyUrO8mRfyZ9IoK60WafLw_gn7vqMGd4eLi50ZlhjRymUFL2Go24/pub" text="With SaberFactions, you can run a faction any way you want. Want to be neutral, competitive, or a nomad?
                         We've got you covered. Plus it integrates nicely into dynmap to plan out journeys and attacks." textHeading="Run a faction your way." cardContent="/assets/images/earth/factions.webp" cardContentDescription="new items 1.17" />
             </div>
             <div className="main">

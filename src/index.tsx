@@ -37,6 +37,7 @@ import SuspenseLoader from "./Util/SuspenseLoader";
 // Page Imports
 // const HomePage = React.lazy(() => import("./Pages/Home"));
 const HomeEarthPage = React.lazy(() => import("./Pages/HomeEarth"));
+const HomePage = React.lazy(() => import("./Pages/Home"));
 const ClassicPage = React.lazy(() => import("./Pages/Classic"));
 const SeasonThree = React.lazy(() => import("./Pages/Season3"));
 const MinigamesPage = React.lazy(() => import("./Pages/Minigames"));
@@ -353,6 +354,11 @@ function MainApp(): JSX.Element {
                                 <AboutPage />
                             </div>
                         </Route>
+                        <Route path="/oldHome">
+                            <div style={{ padding: "24px" }}>
+                                <HomePage />
+                            </div>
+                        </Route>
                         <Route path="/season3">
                             <div style={{ padding: "24px" }}>
                                 <SeasonThree />
@@ -383,9 +389,7 @@ function MainApp(): JSX.Element {
                             <HomeEarthPage />
                         </Route>
                         <Route>
-                            <div style={{ padding: "24px" }}>
-                                <NotFoundPage />
-                            </div>
+                            <NotFoundPage />
                         </Route>
                     </RouterSwitch>
                 </Suspense>

@@ -13,7 +13,8 @@ export default function ShowOffCardEarthRight(props: { buttonText: string, butto
                             {typeof props.text == "string" ? <p style={{ marginBottom: "2rem" }}>{props.text}</p> : props.text}
                             {props.routerLink ?
                                 <Button className="earth-btn" color="primary" size="large" component={Link} startIcon={props.buttonStartIcon} to={props.buttonClickLink}>{props.buttonText}</Button> :
-                                <Button className="earth-btn" color="primary" size="large" startIcon={props.buttonStartIcon} onClick={() => { window.open(props.buttonClickLink, "_blank"); }}>{props.buttonText}</Button>}
+                                // @ts-ignore
+                                <Button className="earth-btn" color="primary" size="large" startIcon={props.buttonStartIcon} onClick={() => { window.location = props.buttonClickLink; }}>{props.buttonText}</Button>}
                         </div>
                     </div>
                 </Grid>

@@ -13,7 +13,7 @@ export default function ShowOffCardRight(props: { buttonText: string, buttonStar
                             {typeof props.text == "string" ? <p>{props.text}</p> : props.text}
                             {props.routerLink ?
                                 <Button variant="outlined" className="homepagebutton" color="primary" component={Link} startIcon={props.buttonStartIcon} to={props.buttonClickLink}>{props.buttonText}</Button> :
-                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={props.buttonStartIcon} onClick={() => { window.open(props.buttonClickLink, "_blank"); }}>{props.buttonText}</Button>}
+                                <Button variant="outlined" className="homepagebutton" color="primary" startIcon={props.buttonStartIcon} onClick={() => { window.open(props.buttonClickLink, "_self"); }}>{props.buttonText}</Button>}
                         </div>
                     </div>
                 </Grid>

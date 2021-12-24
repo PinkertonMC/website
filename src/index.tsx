@@ -400,6 +400,7 @@ function MainApp(): JSX.Element {
         </>
     )
 }
+
 ReactDOM.render(
     <Router>
         <ThemeProvider theme={defaultTheme}>

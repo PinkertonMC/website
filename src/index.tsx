@@ -386,7 +386,9 @@ function MainApp(): JSX.Element {
                             {() => { rickRoll(); }}
                         </Route>
                         <Route path="/" exact>
-                            <HomeEarthPage />
+                            <div style={{ padding: "24px" }}>
+                                <HomePage />
+                            </div>
                         </Route>
                         <Route>
                             <NotFoundPage />
